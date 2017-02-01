@@ -9,11 +9,10 @@
 #import "DLTabBarController.h"
 #import "DLEssenceViewController.h"
 #import "DLNewViewController.h"
-//#import "DLPublishViewController.h"
 #import "DLFriendTrendViewController.h"
 #import "DLMeTableViewController.h"
+#import "DLNavigationController.h"
 
-#import "UIImage+Image.h"
 #import "DLTabBar.h"
 
 @interface DLTabBarController ()
@@ -55,26 +54,22 @@
 - (void)setupAllChildVc {
     //精华
     DLEssenceViewController *vc0 = [[DLEssenceViewController alloc] init];
-    UINavigationController *nav0 = [[UINavigationController alloc] initWithRootViewController:vc0];
+    DLNavigationController *nav0 = [[DLNavigationController alloc] initWithRootViewController:vc0];
     [self addChildViewController:nav0];
     
     //新帖
     DLNewViewController *vc1 = [[DLNewViewController alloc] init];
-    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    DLNavigationController *nav1 = [[DLNavigationController alloc] initWithRootViewController:vc1];
     [self addChildViewController:nav1];
-    
-    //发布
-//    DLPublishViewController *vc3 = [[DLPublishViewController alloc] init];
-//    [self addChildViewController:vc3];
     
     //关注
     DLFriendTrendViewController *vc2 = [[DLFriendTrendViewController alloc] init];
-    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+    DLNavigationController *nav2 = [[DLNavigationController alloc] initWithRootViewController:vc2];
     [self addChildViewController:nav2];
     
     //我的
     DLMeTableViewController *vc3 = [[DLMeTableViewController alloc] init];
-    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
+    DLNavigationController *nav3 = [[DLNavigationController alloc] initWithRootViewController:vc3];
     [self addChildViewController:nav3];
 
 }

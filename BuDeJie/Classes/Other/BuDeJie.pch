@@ -6,6 +6,7 @@
 //  Copyright © 2017年 Lenny. All rights reserved.
 //
 
+#import "UIImage+Image.h"
 #import "UIView+Frame.h"
 
 #define dlfunc NSLog(@"%s",__func__)

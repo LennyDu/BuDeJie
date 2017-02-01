@@ -16,6 +16,9 @@
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
 		B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05F1E4206AE00FFEFF0 /* UIView+Frame.m */; };
+		B888C0631E4211CD00FFEFF0 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0621E4211CD00FFEFF0 /* UIBarButtonItem+Item.m */; };
+		B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0651E4218EB00FFEFF0 /* DLNavigationController.m */; };
+		B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C06C1E421C4500FFEFF0 /* DLSettingViewController.m */; };
 		B8BE94141E4042EA0025065E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94121E4042EA0025065E /* Main.storyboard */; };
 		B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94151E4042EA0025065E /* Assets.xcassets */; };
 		B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94171E4042EA0025065E /* LaunchScreen.storyboard */; };
@@ -63,6 +66,12 @@
 		B888C05D1E42035D00FFEFF0 /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		B888C05E1E4206AE00FFEFF0 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		B888C05F1E4206AE00FFEFF0 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		B888C0611E4211CD00FFEFF0 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		B888C0621E4211CD00FFEFF0 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		B888C0641E4218EB00FFEFF0 /* DLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNavigationController.h; sourceTree = "<group>"; };
+		B888C0651E4218EB00FFEFF0 /* DLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
+		B888C06B1E421C4500FFEFF0 /* DLSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSettingViewController.h; sourceTree = "<group>"; };
+		B888C06C1E421C4500FFEFF0 /* DLSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSettingViewController.m; sourceTree = "<group>"; };
 		B8BE94061E4042EA0025065E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE94131E4042EA0025065E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8BE94151E4042EA0025065E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +122,8 @@
 				B888C0511E4183F100FFEFF0 /* UIImage+Image.m */,
 				B888C05E1E4206AE00FFEFF0 /* UIView+Frame.h */,
 				B888C05F1E4206AE00FFEFF0 /* UIView+Frame.m */,
+				B888C0611E4211CD00FFEFF0 /* UIBarButtonItem+Item.h */,
+				B888C0621E4211CD00FFEFF0 /* UIBarButtonItem+Item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -132,6 +143,8 @@
 			children = (
 				B888C0571E41882800FFEFF0 /* DLTabBarController.h */,
 				B888C0581E41882800FFEFF0 /* DLTabBarController.m */,
+				B888C0641E4218EB00FFEFF0 /* DLNavigationController.h */,
+				B888C0651E4218EB00FFEFF0 /* DLNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +161,39 @@
 			children = (
 				B888C05A1E41F6F200FFEFF0 /* DLTabBar.h */,
 				B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B888C0671E421BEE00FFEFF0 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				B888C0681E421C1800FFEFF0 /* Controller */,
+				B888C0691E421C1800FFEFF0 /* Model */,
+				B888C06A1E421C1800FFEFF0 /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		B888C0681E421C1800FFEFF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B888C06B1E421C4500FFEFF0 /* DLSettingViewController.h */,
+				B888C06C1E421C4500FFEFF0 /* DLSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B888C0691E421C1800FFEFF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B888C06A1E421C1800FFEFF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +259,7 @@
 		B8FFD3A81E407D9B00774227 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B888C0671E421BEE00FFEFF0 /* Setting(设置) */,
 				B888C0531E4187D500FFEFF0 /* Main(主要) */,
 				B8FFD3A91E407D9B00774227 /* Essence(精华) */,
 				B8FFD3B51E407D9B00774227 /* New(新帖) */,
@@ -543,10 +590,13 @@
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8FFD3C51E407D9B00774227 /* ViewController.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
+				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
+				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
 				B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */,
 				B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */,
 				B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */,
 				B8FFD3C41E407D9B00774227 /* main.m in Sources */,
+				B888C0631E4211CD00FFEFF0 /* UIBarButtonItem+Item.m in Sources */,
 				B81F84C01E40864B002CB823 /* DLFriendTrendViewController.m in Sources */,
 				B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */,
 				B81F84BA1E40860B002CB823 /* DLNewViewController.m in Sources */,
