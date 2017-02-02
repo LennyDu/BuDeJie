@@ -39,7 +39,7 @@
 #pragma mark - 点击订阅标签调用
 - (void)tagClick
 {
-    dlfunc;
+    DLFunc;
 }
 
 - (void)didReceiveMemoryWarning {

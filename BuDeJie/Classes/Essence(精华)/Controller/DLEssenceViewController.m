@@ -39,7 +39,7 @@
 }
 
 - (void)gameClick {
-    dlfunc;
+    DLFunc;
 }
 
 - (void)didReceiveMemoryWarning {

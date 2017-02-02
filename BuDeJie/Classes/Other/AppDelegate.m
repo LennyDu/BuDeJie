@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "DLTabBarController.h"
+//#import "DLTabBarController.h"
+#import "DLAdViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,12 @@
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //设置窗口根控制器
-    DLTabBarController *tabBarController = [[DLTabBarController alloc] init];
-    self.window.rootViewController = tabBarController;
+//    DLTabBarController *tabBarController = [[DLTabBarController alloc] init];
+//    self.window.rootViewController = tabBarController;
+    
+    DLAdViewController *adVc = [[DLAdViewController alloc] init];
+    self.window.rootViewController = adVc;
+    
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;
