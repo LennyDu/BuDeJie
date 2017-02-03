@@ -57,7 +57,8 @@
 {
     //跳转到设置页面
     DLSettingViewController *settingVc = [[DLSettingViewController alloc] init];
-    settingVc.hidesBottomBarWhenPushed = YES;
+    //所有的自控制器都需要隐藏底部,所以可以在pushViewController中来处理这个操作
+//    settingVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:settingVc animated:YES];
 }
 

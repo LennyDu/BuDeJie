@@ -34,6 +34,10 @@
 		B8BE94241E4042EA0025065E /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE94231E4042EA0025065E /* BuDeJieTests.m */; };
 		B8BE942F1E4042EA0025065E /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE942E1E4042EA0025065E /* BuDeJieUITests.m */; };
 		B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C10D771E42EA750098C577 /* DLAdItem.m */; };
+		B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */; };
+		B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */; };
+		B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */; };
+		B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D791E449E5300E23B6A /* DLSubTagItem.m */; };
 		B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BB1E407D9B00774227 /* AppDelegate.m */; };
 		B8FFD3C41E407D9B00774227 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BC1E407D9B00774227 /* main.m */; };
 		B8FFD3C51E407D9B00774227 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BE1E407D9B00774227 /* ViewController.m */; };
@@ -105,6 +109,13 @@
 		B8BE94301E4042EA0025065E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8C10D761E42EA750098C577 /* DLAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAdItem.h; sourceTree = "<group>"; };
 		B8C10D771E42EA750098C577 /* DLAdItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAdItem.m; sourceTree = "<group>"; };
+		B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagViewController.h; sourceTree = "<group>"; };
+		B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagViewController.m; sourceTree = "<group>"; };
+		B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagCell.h; sourceTree = "<group>"; };
+		B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagCell.m; sourceTree = "<group>"; };
+		B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLSubTagCell.xib; sourceTree = "<group>"; };
+		B8EB9D781E449E5300E23B6A /* DLSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagItem.h; sourceTree = "<group>"; };
+		B8EB9D791E449E5300E23B6A /* DLSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagItem.m; sourceTree = "<group>"; };
 		B8FFD3BA1E407D9B00774227 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8FFD3BB1E407D9B00774227 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8FFD3BC1E407D9B00774227 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -472,6 +483,8 @@
 			children = (
 				B81F84B81E40860B002CB823 /* DLNewViewController.h */,
 				B81F84B91E40860B002CB823 /* DLNewViewController.m */,
+				B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */,
+				B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +492,8 @@
 		B8FFD3B71E407D9B00774227 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B8EB9D781E449E5300E23B6A /* DLSubTagItem.h */,
+				B8EB9D791E449E5300E23B6A /* DLSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,6 +501,9 @@
 		B8FFD3B81E407D9B00774227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */,
+				B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */,
+				B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -659,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */,
+				B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */,
 				B8A67D101E42D15A00E4A708 /* LaunchImage-700-568h@2x.png in Resources */,
 				B8A67D141E42D15A00E4A708 /* LaunchImage.png in Resources */,
 				B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */,
@@ -754,8 +773,11 @@
 				B81F84C01E40864B002CB823 /* DLFriendTrendViewController.m in Sources */,
 				B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */,
 				B81F84BA1E40860B002CB823 /* DLNewViewController.m in Sources */,
+				B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */,
 				B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */,
+				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,
+				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

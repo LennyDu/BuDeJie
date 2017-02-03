@@ -8,6 +8,7 @@
 
 #import "DLNewViewController.h"
 #import "UIBarButtonItem+Item.h"
+#import "DLSubTagViewController.h"
 
 @interface DLNewViewController ()
 
@@ -39,7 +40,9 @@
 #pragma mark - 点击订阅标签调用
 - (void)tagClick
 {
-    DLFunc;
+    DLSubTagViewController *subTagVc = [[DLSubTagViewController alloc] init];
+    
+    [self.navigationController pushViewController:subTagVc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
