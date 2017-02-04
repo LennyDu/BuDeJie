@@ -48,4 +48,24 @@
 - (CGFloat)dl_y {
     return self.frame.origin.y;
 }
+
+- (void)setDl_centerX:(CGFloat)dl_centerX {
+    CGPoint center = self.center;
+    center.x = dl_centerX;
+    self.center = center;
+}
+
+- (CGFloat)dl_centerX {
+    return self.center.x;
+}
+
+- (void)setDl_centerY:(CGFloat)dl_centerY {
+    CGPoint center = self.center;
+    center.y = dl_centerY;
+    self.center = center;
+}
+
+- (CGFloat)dl_centerY {
+    return self.center.y;
+}
 @end

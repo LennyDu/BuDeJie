@@ -8,6 +8,7 @@
 
 #import "DLFriendTrendViewController.h"
 #import "UIBarButtonItem+Item.h"
+#import "DLLoginRegisterViewController.h"
 
 @interface DLFriendTrendViewController ()
 
@@ -18,11 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupNavBar];
 }
 
+#pragma mark 点击登录注册按钮
+- (IBAction)clickLoginRegisterBtn:(UIButton *)sender {
+    DLLoginRegisterViewController *loginRegisterVc = [[DLLoginRegisterViewController alloc] init];
+    [self presentViewController:loginRegisterVc animated:YES completion:nil];
+}
 #pragma mark - 设置导航条
 - (void)setupNavBar
 {

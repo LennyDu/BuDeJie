@@ -17,3 +17,5 @@
 #define iphone6 (DLScreenH == 667)
 #define iphone5 (DLScreenH == 568)
 #define iphone4 (DLScreenH == 480)
+
+#define DLColor(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1]

@@ -34,13 +34,21 @@
 		B8BE94241E4042EA0025065E /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE94231E4042EA0025065E /* BuDeJieTests.m */; };
 		B8BE942F1E4042EA0025065E /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE942E1E4042EA0025065E /* BuDeJieUITests.m */; };
 		B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C10D771E42EA750098C577 /* DLAdItem.m */; };
+		B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199A91E45C8000066EF55 /* DLLoginRegisterViewController.m */; };
+		B8D199AC1E45C8000066EF55 /* DLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D199AA1E45C8000066EF55 /* DLLoginRegisterViewController.xib */; };
+		B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199AE1E45CFFA0066EF55 /* DLLoginRegisterView.m */; };
+		B8D199B11E45D02B0066EF55 /* DLLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D199B01E45D02B0066EF55 /* DLLoginRegisterView.xib */; };
+		B8D199B41E45DE940066EF55 /* DLFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199B31E45DE940066EF55 /* DLFastLoginView.m */; };
+		B8D199B61E45DEAC0066EF55 /* DLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D199B51E45DEAC0066EF55 /* DLFastLoginView.xib */; };
+		B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199B81E45E0290066EF55 /* DLFastLoginButton.m */; };
+		B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199BB1E46082F0066EF55 /* DLLoginTextField.m */; };
 		B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */; };
 		B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */; };
 		B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */; };
 		B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D791E449E5300E23B6A /* DLSubTagItem.m */; };
+		B8EB9D7C1E44AFE300E23B6A /* DLFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D7B1E44AFE300E23B6A /* DLFriendTrendViewController.xib */; };
 		B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BB1E407D9B00774227 /* AppDelegate.m */; };
 		B8FFD3C41E407D9B00774227 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BC1E407D9B00774227 /* main.m */; };
-		B8FFD3C51E407D9B00774227 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFD3BE1E407D9B00774227 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +117,19 @@
 		B8BE94301E4042EA0025065E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8C10D761E42EA750098C577 /* DLAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAdItem.h; sourceTree = "<group>"; };
 		B8C10D771E42EA750098C577 /* DLAdItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAdItem.m; sourceTree = "<group>"; };
+		B8D199A81E45C8000066EF55 /* DLLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLoginRegisterViewController.h; sourceTree = "<group>"; };
+		B8D199A91E45C8000066EF55 /* DLLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLoginRegisterViewController.m; sourceTree = "<group>"; };
+		B8D199AA1E45C8000066EF55 /* DLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		B8D199AD1E45CFFA0066EF55 /* DLLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLoginRegisterView.h; sourceTree = "<group>"; };
+		B8D199AE1E45CFFA0066EF55 /* DLLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLoginRegisterView.m; sourceTree = "<group>"; };
+		B8D199B01E45D02B0066EF55 /* DLLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLLoginRegisterView.xib; sourceTree = "<group>"; };
+		B8D199B21E45DE940066EF55 /* DLFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFastLoginView.h; sourceTree = "<group>"; };
+		B8D199B31E45DE940066EF55 /* DLFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFastLoginView.m; sourceTree = "<group>"; };
+		B8D199B51E45DEAC0066EF55 /* DLFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLFastLoginView.xib; sourceTree = "<group>"; };
+		B8D199B71E45E0290066EF55 /* DLFastLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFastLoginButton.h; sourceTree = "<group>"; };
+		B8D199B81E45E0290066EF55 /* DLFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFastLoginButton.m; sourceTree = "<group>"; };
+		B8D199BA1E46082F0066EF55 /* DLLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLoginTextField.h; sourceTree = "<group>"; };
+		B8D199BB1E46082F0066EF55 /* DLLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLoginTextField.m; sourceTree = "<group>"; };
 		B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagViewController.h; sourceTree = "<group>"; };
 		B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagViewController.m; sourceTree = "<group>"; };
 		B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagCell.h; sourceTree = "<group>"; };
@@ -116,11 +137,10 @@
 		B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLSubTagCell.xib; sourceTree = "<group>"; };
 		B8EB9D781E449E5300E23B6A /* DLSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagItem.h; sourceTree = "<group>"; };
 		B8EB9D791E449E5300E23B6A /* DLSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagItem.m; sourceTree = "<group>"; };
+		B8EB9D7B1E44AFE300E23B6A /* DLFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLFriendTrendViewController.xib; sourceTree = "<group>"; };
 		B8FFD3BA1E407D9B00774227 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8FFD3BB1E407D9B00774227 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8FFD3BC1E407D9B00774227 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B8FFD3BD1E407D9B00774227 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B8FFD3BE1E407D9B00774227 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF7CE131E78EE7A11B3ACFA2 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		D73154C7FBBFCE7CC1160111 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -417,6 +437,10 @@
 			children = (
 				B81F84BE1E40864B002CB823 /* DLFriendTrendViewController.h */,
 				B81F84BF1E40864B002CB823 /* DLFriendTrendViewController.m */,
+				B8EB9D7B1E44AFE300E23B6A /* DLFriendTrendViewController.xib */,
+				B8D199A81E45C8000066EF55 /* DLLoginRegisterViewController.h */,
+				B8D199A91E45C8000066EF55 /* DLLoginRegisterViewController.m */,
+				B8D199AA1E45C8000066EF55 /* DLLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,6 +455,16 @@
 		B8FFD3B01E407D9B00774227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8D199AD1E45CFFA0066EF55 /* DLLoginRegisterView.h */,
+				B8D199AE1E45CFFA0066EF55 /* DLLoginRegisterView.m */,
+				B8D199B01E45D02B0066EF55 /* DLLoginRegisterView.xib */,
+				B8D199B21E45DE940066EF55 /* DLFastLoginView.h */,
+				B8D199B31E45DE940066EF55 /* DLFastLoginView.m */,
+				B8D199B51E45DEAC0066EF55 /* DLFastLoginView.xib */,
+				B8D199B71E45E0290066EF55 /* DLFastLoginButton.h */,
+				B8D199B81E45E0290066EF55 /* DLFastLoginButton.m */,
+				B8D199BA1E46082F0066EF55 /* DLLoginTextField.h */,
+				B8D199BB1E46082F0066EF55 /* DLLoginTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,8 +549,6 @@
 				B8FFD3BA1E407D9B00774227 /* AppDelegate.h */,
 				B8FFD3BB1E407D9B00774227 /* AppDelegate.m */,
 				B8FFD3BC1E407D9B00774227 /* main.m */,
-				B8FFD3BD1E407D9B00774227 /* ViewController.h */,
-				B8FFD3BE1E407D9B00774227 /* ViewController.m */,
 				B888C05D1E42035D00FFEFF0 /* BuDeJie.pch */,
 			);
 			path = Other;
@@ -676,9 +708,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D199B61E45DEAC0066EF55 /* DLFastLoginView.xib in Resources */,
+				B8EB9D7C1E44AFE300E23B6A /* DLFriendTrendViewController.xib in Resources */,
 				B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */,
+				B8D199AC1E45C8000066EF55 /* DLLoginRegisterViewController.xib in Resources */,
 				B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */,
 				B8A67D101E42D15A00E4A708 /* LaunchImage-700-568h@2x.png in Resources */,
+				B8D199B11E45D02B0066EF55 /* DLLoginRegisterView.xib in Resources */,
 				B8A67D141E42D15A00E4A708 /* LaunchImage.png in Resources */,
 				B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */,
 				B8A67D111E42D15A00E4A708 /* LaunchImage-700@2x.png in Resources */,
@@ -760,12 +796,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
-				B8FFD3C51E407D9B00774227 /* ViewController.m in Sources */,
+				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
+				B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */,
 				B8A67D061E42C99E00E4A708 /* DLAdViewController.m in Sources */,
 				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
+				B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */,
 				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
 				B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */,
+				B8D199B41E45DE940066EF55 /* DLFastLoginView.m in Sources */,
 				B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */,
 				B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */,
 				B8FFD3C41E407D9B00774227 /* main.m in Sources */,
@@ -777,6 +816,7 @@
 				B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */,
 				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,
+				B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */,
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
 			);

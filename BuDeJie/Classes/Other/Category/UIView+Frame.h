@@ -13,4 +13,6 @@
 @property CGFloat dl_height;
 @property CGFloat dl_x;
 @property CGFloat dl_y;
+@property CGFloat dl_centerX;
+@property CGFloat dl_centerY;
 @end
