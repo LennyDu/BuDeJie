@@ -68,7 +68,9 @@
     [self addChildViewController:nav2];
     
     //我的
-    DLMeTableViewController *vc3 = [[DLMeTableViewController alloc] init];
+    UIStoryboard *meStoryboard = [UIStoryboard storyboardWithName:NSStringFromClass([DLMeTableViewController class]) bundle:nil];
+    DLMeTableViewController *vc3 = [meStoryboard instantiateInitialViewController];
+//    DLMeTableViewController *vc3 = [[DLMeTableViewController alloc] init];
     DLNavigationController *nav3 = [[DLNavigationController alloc] initWithRootViewController:vc3];
     [self addChildViewController:nav3];
 
