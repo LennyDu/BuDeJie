@@ -13,13 +13,14 @@
 #import <AFNetworking.h>
 #import <MJExtension/MJExtension.h>
 #import "DLSquareItem.h"
+#import <SafariServices/SafariServices.h>
 
 NSString * const cellId = @"UICollectionViewCell";
 NSInteger const cols = 4;
 CGFloat const margin = 1;
 #define itemWH (DLScreenW - (cols - 1) * margin) / cols
 
-@interface DLMeTableViewController () <UICollectionViewDataSource>
+@interface DLMeTableViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SFSafariViewControllerDelegate>
 /** items */
 @property (nonatomic,strong) NSMutableArray *items;
 
@@ -29,7 +30,7 @@ CGFloat const margin = 1;
 
 @implementation DLMeTableViewController
 
-#pragma mark 生命周期方法
+#pragma mark - 生命周期方法
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -54,13 +55,8 @@ CGFloat const margin = 1;
 //    NSLog(@"%@", NSStringFromUIEdgeInsets(self.tableView.contentInset));
 //}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"%@", NSStringFromCGRect([tableView cellForRowAtIndexPath:indexPath].frame));
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
 
-#pragma mark 最后一行数据没占满一行的时候进行不全操作
+// 最后一行数据没占满一行的时候进行不全操作
 - (void)repairSquareGap {
     NSInteger itemCount = _items.count;
     NSInteger exter = itemCount % cols;
@@ -116,23 +112,9 @@ CGFloat const margin = 1;
     _collectionView = collectionView;
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([DLSquareCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:cellId];
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     collectionView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = collectionView;
-    
-    
-}
-
-#pragma mark UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _items.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DLSquareCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-    
-    cell.item = _items[indexPath.row];
-    
-    return cell;
 }
 
 - (void)setupNavBar
@@ -164,12 +146,49 @@ CGFloat const margin = 1;
     //跳转到设置页面
     DLSettingViewController *settingVc = [[DLSettingViewController alloc] init];
     //所有的自控制器都需要隐藏底部,所以可以在pushViewController中来处理这个操作
-//    settingVc.hidesBottomBarWhenPushed = YES;
+    //    settingVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewControllerDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    NSLog(@"%@", NSStringFromCGRect([tableView cellForRowAtIndexPath:indexPath].frame));
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _items.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DLSquareCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    
+    cell.item = _items[indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DLSquareItem *item = self.items[indexPath.row];
+    if (![item.url containsString:@"http"]) return;
+    
+    NSURL *url = [NSURL URLWithString:item.url];
+    SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:url];
+    [self presentViewController:safariVC animated:YES completion:nil];
+}
+
+
+#pragma mark - SFSafariViewControllerDelegate
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
