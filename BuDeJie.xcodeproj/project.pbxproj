@@ -15,6 +15,7 @@
 		B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F84C21E408687002CB823 /* DLMeTableViewController.m */; };
 		B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */; };
 		B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */; };
+		B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B781E4F1B500006ECA3 /* DLFileTool.m */; };
 		B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0511E4183F100FFEFF0 /* UIImage+Image.m */; };
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
@@ -89,6 +90,8 @@
 		B84C6B701E4EEDED0006ECA3 /* DLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWebViewController.h; sourceTree = "<group>"; };
 		B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWebViewController.m; sourceTree = "<group>"; };
 		B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLWebViewController.xib; sourceTree = "<group>"; };
+		B84C6B771E4F1B500006ECA3 /* DLFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFileTool.h; sourceTree = "<group>"; };
+		B84C6B781E4F1B500006ECA3 /* DLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFileTool.m; sourceTree = "<group>"; };
 		B888C0501E4183F100FFEFF0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		B888C0511E4183F100FFEFF0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		B888C0571E41882800FFEFF0 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -193,6 +196,23 @@
 				CF7CE131E78EE7A11B3ACFA2 /* Pods-BuDeJie.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B84C6B751E4F1B3A0006ECA3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B84C6B761E4F1B3A0006ECA3 /* File */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B84C6B761E4F1B3A0006ECA3 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				B84C6B771E4F1B500006ECA3 /* DLFileTool.h */,
+				B84C6B781E4F1B500006ECA3 /* DLFileTool.m */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		B888C04F1E4183C800FFEFF0 /* Category */ = {
@@ -391,6 +411,7 @@
 		B8FFD3A81E407D9B00774227 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B84C6B751E4F1B3A0006ECA3 /* Tool */,
 				B8A67D001E42C94700E4A708 /* Ad(广告) */,
 				B888C0671E421BEE00FFEFF0 /* Setting(设置) */,
 				B888C0531E4187D500FFEFF0 /* Main(主要) */,
@@ -847,6 +868,7 @@
 				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,
 				B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */,
+				B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */,
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
 			);
