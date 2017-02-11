@@ -15,6 +15,8 @@
 #import "DLSquareItem.h"
 #import <SafariServices/SafariServices.h>
 
+#import "DLWebViewController.h"
+
 NSString * const cellId = @"UICollectionViewCell";
 NSInteger const cols = 4;
 CGFloat const margin = 1;
@@ -182,8 +184,13 @@ CGFloat const margin = 1;
     if (![item.url containsString:@"http"]) return;
     
     NSURL *url = [NSURL URLWithString:item.url];
-    SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:url];
-    [self presentViewController:safariVC animated:YES completion:nil];
+//    SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:url];
+//    [self presentViewController:safariVC animated:YES completion:nil];
+    
+    DLWebViewController *webVC = [[DLWebViewController alloc] init];
+    webVC.url = url;
+    [self.navigationController pushViewController:webVC animated:YES];
+    
 }
 
 

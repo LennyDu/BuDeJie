@@ -13,6 +13,8 @@
 		B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F84BC1E408627002CB823 /* DLPublishViewController.m */; };
 		B81F84C01E40864B002CB823 /* DLFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F84BF1E40864B002CB823 /* DLFriendTrendViewController.m */; };
 		B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F84C21E408687002CB823 /* DLMeTableViewController.m */; };
+		B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */; };
+		B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */; };
 		B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0511E4183F100FFEFF0 /* UIImage+Image.m */; };
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
@@ -84,6 +86,9 @@
 		B81F84BF1E40864B002CB823 /* DLFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFriendTrendViewController.m; sourceTree = "<group>"; };
 		B81F84C11E408687002CB823 /* DLMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMeTableViewController.h; sourceTree = "<group>"; };
 		B81F84C21E408687002CB823 /* DLMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMeTableViewController.m; sourceTree = "<group>"; };
+		B84C6B701E4EEDED0006ECA3 /* DLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWebViewController.h; sourceTree = "<group>"; };
+		B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWebViewController.m; sourceTree = "<group>"; };
+		B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLWebViewController.xib; sourceTree = "<group>"; };
 		B888C0501E4183F100FFEFF0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		B888C0511E4183F100FFEFF0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		B888C0571E41882800FFEFF0 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -495,6 +500,9 @@
 				B81F84C11E408687002CB823 /* DLMeTableViewController.h */,
 				B81F84C21E408687002CB823 /* DLMeTableViewController.m */,
 				B8A1869A1E46FF66005CA154 /* DLMeTableViewController.storyboard */,
+				B84C6B701E4EEDED0006ECA3 /* DLWebViewController.h */,
+				B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */,
+				B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -735,6 +743,7 @@
 				B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */,
 				B8A67D111E42D15A00E4A708 /* LaunchImage-700@2x.png in Resources */,
 				B8A1869B1E46FF66005CA154 /* DLMeTableViewController.storyboard in Resources */,
+				B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */,
 				B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B8A67D0F1E42D15A00E4A708 /* LaunchImage-568h@2x.png in Resources */,
 				B8A67D121E42D15A00E4A708 /* LaunchImage-800-667h@2x.png in Resources */,
@@ -813,6 +822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */,
 				B8A1869F1E47068E005CA154 /* DLSquareCollectionViewCell.m in Sources */,
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
