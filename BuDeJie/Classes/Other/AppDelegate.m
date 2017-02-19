@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DLTabBarController.h"
-//#import "DLAdViewController.h"
+#import "DLAdViewController.h"
 
 @interface AppDelegate ()
 

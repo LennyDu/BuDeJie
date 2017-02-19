@@ -16,6 +16,7 @@
 		B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B711E4EEDED0006ECA3 /* DLWebViewController.m */; };
 		B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */; };
 		B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B781E4F1B500006ECA3 /* DLFileTool.m */; };
+		B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B86865831E59CC6800BAC6CB /* DLTitleButton.m */; };
 		B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0511E4183F100FFEFF0 /* UIImage+Image.m */; };
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
@@ -92,6 +93,8 @@
 		B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLWebViewController.xib; sourceTree = "<group>"; };
 		B84C6B771E4F1B500006ECA3 /* DLFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFileTool.h; sourceTree = "<group>"; };
 		B84C6B781E4F1B500006ECA3 /* DLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFileTool.m; sourceTree = "<group>"; };
+		B86865821E59CC6800BAC6CB /* DLTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTitleButton.h; sourceTree = "<group>"; };
+		B86865831E59CC6800BAC6CB /* DLTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTitleButton.m; sourceTree = "<group>"; };
 		B888C0501E4183F100FFEFF0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		B888C0511E4183F100FFEFF0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		B888C0571E41882800FFEFF0 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 		B8FFD3AC1E407D9B00774227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B86865821E59CC6800BAC6CB /* DLTitleButton.h */,
+				B86865831E59CC6800BAC6CB /* DLTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -847,6 +852,7 @@
 				B8A1869F1E47068E005CA154 /* DLSquareCollectionViewCell.m in Sources */,
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
+				B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */,
 				B8A186A31E470C87005CA154 /* DLSquareItem.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
 				B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */,
