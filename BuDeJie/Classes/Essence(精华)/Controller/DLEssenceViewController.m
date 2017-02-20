@@ -16,7 +16,9 @@
 #import "DLPictureTableViewController.h"
 #import "DLWordTableViewController.h"
 
-@interface DLEssenceViewController ()
+@interface DLEssenceViewController () <UIScrollViewDelegate>
+/** ScrollView */
+@property (nonatomic,weak) UIScrollView *scrollView;
 /** 标题栏 */
 @property (nonatomic,weak) UIView *titlesView;
 /** 下划线 */
@@ -28,6 +30,7 @@
 
 @implementation DLEssenceViewController
 
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -41,6 +44,9 @@
     [self setupScrollView];
     
     [self setupTitlesView];
+    
+    //首先只添加第0个控制器的view到ScrollView上
+    [self addChildVcViewIntoScrollView];
 }
 
 /**
@@ -75,23 +81,28 @@
  ScrollView
  */
 - (void)setupScrollView {
+    //在scrollView上面添加TableView, Tableview的Y会自动向下移动, 不允许自动修改内边距
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor blueColor];
     scrollView.frame = self.view.bounds;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
     [self.view addSubview:scrollView];
+    _scrollView = scrollView;
     
     NSUInteger count = self.childViewControllers.count;
     CGFloat scrollViewW = scrollView.dl_width;
-    CGFloat scrollViewH = scrollView.dl_height;
-    
-    for (NSUInteger i = 0; i < count; i++) {
-        UIView *childVcView = self.childViewControllers[i].view;
-        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-        [scrollView addSubview:childVcView];
-    }
+//    CGFloat scrollViewH = scrollView.dl_height;
+//    
+//    for (NSUInteger i = 0; i < count; i++) {
+//        UIView *childVcView = self.childViewControllers[i].view;
+//        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
+//        [scrollView addSubview:childVcView];
+//    }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
 }
@@ -124,6 +135,7 @@
     
     for (NSUInteger i = 0; i < count; i++) {
         DLTitleButton *titleButton = [[DLTitleButton alloc] init];
+        titleButton.tag = i;
         [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.titlesView addSubview:titleButton];
         
@@ -171,6 +183,12 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.titleUnderline.dl_centerX = titleButton.dl_centerX;
         self.titleUnderline.dl_width = titleButton.titleLabel.dl_width + 10;
+        
+        //点击标题按钮后切换到对应的控制器
+        CGFloat offsetX = self.scrollView.dl_width * titleButton.tag;
+        self.scrollView.contentOffset = CGPointMake(offsetX, self.scrollView.contentOffset.y);
+    } completion:^(BOOL finished) {
+        [self addChildVcViewIntoScrollView];
     }];
 }
 
@@ -181,19 +199,44 @@
     DLFunc;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSUInteger index = scrollView.contentOffset.x / scrollView.dl_width;
+    
+    DLTitleButton *titleButton = self.titlesView.subviews[index];
+    [self titleButtonClick:titleButton];
+}
+
+#pragma mark - 其他
+
+- (void)addChildVcViewIntoScrollView {
+    
+    CGFloat scrollViewW = self.scrollView.dl_width;
+    CGFloat offsetX = self.scrollView.contentOffset.x;
+    NSUInteger index = offsetX / scrollViewW;
+
+    UIViewController *childVc = self.childViewControllers[index];
+    //之前View已经添加到scrollView上面则不再加载
+    if (childVc.isViewLoaded) return;
+    
+    CGFloat scrollViewH = self.scrollView.dl_height;
+
+    UIView *childVcView = childVc.view;
+//    childVcView.frame = CGRectMake(self.scrollView.bounds.origin.x, self.scrollView.bounds.origin.y, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+
+//    childVcView.frame = CGRectMake(self.scrollView.contentOffset.x, self.scrollView.contentOffset.y, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+
+//    childVcView.frame = CGRectMake(self.scrollView.contentOffset.x, self.scrollView.contentOffset.y, scrollViewW, self.scrollView.xmg_height);
+
+//    childVcView.frame = CGRectMake(self.scrollView.contentOffset.x, 0, scrollViewW, self.scrollView.xmg_height);
+
+//    childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, self.scrollView.xmg_height);
+    childVcView.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:childVcView];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

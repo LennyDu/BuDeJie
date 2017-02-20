@@ -8,6 +8,7 @@
 
 #import "UIImage+Image.h"
 #import "UIView+Frame.h"
+#import "DLConst.h"
 
 #define DLFunc NSLog(@"%s",__func__)
 

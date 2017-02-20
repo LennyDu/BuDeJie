@@ -41,6 +41,7 @@
 		B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */; };
 		B8B8B8E81E5A75B6006A8EEC /* DLPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */; };
 		B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */; };
+		B8B8B8EE1E5A7BB8006A8EEC /* DLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8ED1E5A7BB8006A8EEC /* DLConst.m */; };
 		B8BE94141E4042EA0025065E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94121E4042EA0025065E /* Main.storyboard */; };
 		B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94151E4042EA0025065E /* Assets.xcassets */; };
 		B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94171E4042EA0025065E /* LaunchScreen.storyboard */; };
@@ -140,6 +141,8 @@
 		B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPictureTableViewController.m; sourceTree = "<group>"; };
 		B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWordTableViewController.h; sourceTree = "<group>"; };
 		B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWordTableViewController.m; sourceTree = "<group>"; };
+		B8B8B8EC1E5A7BB8006A8EEC /* DLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLConst.h; sourceTree = "<group>"; };
+		B8B8B8ED1E5A7BB8006A8EEC /* DLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLConst.m; sourceTree = "<group>"; };
 		B8BE94061E4042EA0025065E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE94131E4042EA0025065E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8BE94151E4042EA0025065E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -625,6 +628,8 @@
 				B8FFD3BB1E407D9B00774227 /* AppDelegate.m */,
 				B8FFD3BC1E407D9B00774227 /* main.m */,
 				B888C05D1E42035D00FFEFF0 /* BuDeJie.pch */,
+				B8B8B8EC1E5A7BB8006A8EEC /* DLConst.h */,
+				B8B8B8ED1E5A7BB8006A8EEC /* DLConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -886,6 +891,7 @@
 				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
 				B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */,
 				B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */,
+				B8B8B8EE1E5A7BB8006A8EEC /* DLConst.m in Sources */,
 				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
 				B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */,
 				B8D199B41E45DE940066EF55 /* DLFastLoginView.m in Sources */,

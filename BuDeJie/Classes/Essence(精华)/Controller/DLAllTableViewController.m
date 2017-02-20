@@ -18,6 +18,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = DLRandomColor;
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(DLNavMaxY + DLTitlesViewH, 0, DLTabBarH, 0);
+    
+    DLFunc;
 }
 
 - (void)didReceiveMemoryWarning {
