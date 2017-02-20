@@ -49,6 +49,18 @@ CGFloat const margin = 1;
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:DLTabBarButtonDidRepeatClickNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 监听
+- (void)tabBarButtonDidRepeatClick {
+    if (self.view.window == nil) return;
+    NSLog(@"%@ - 刷新数据", self.class);
 }
 
 //- (void)viewWillAppear:(BOOL)animated {

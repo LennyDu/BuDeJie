@@ -91,6 +91,7 @@
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
+    scrollView.scrollsToTop = NO;
     [self.view addSubview:scrollView];
     _scrollView = scrollView;
     
@@ -176,10 +177,16 @@
  @param titleButton 点击的标题按钮
  */
 - (void)titleButtonClick:(DLTitleButton *)titleButton {
+    
+    if (self.previousClickedTitleButton == titleButton) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DLTitleButtonDidRepeatClickNotification object:nil];
+    }
+    
     self.previousClickedTitleButton.selected = NO;
     titleButton.selected = YES;
     self.previousClickedTitleButton = titleButton;
     
+    NSUInteger index = titleButton.tag;
     [UIView animateWithDuration:0.25 animations:^{
         self.titleUnderline.dl_centerX = titleButton.dl_centerX;
         self.titleUnderline.dl_width = titleButton.titleLabel.dl_width + 10;
@@ -190,6 +197,17 @@
     } completion:^(BOOL finished) {
         [self addChildVcViewIntoScrollView];
     }];
+    
+    //点击标题按钮的时候, 设置点击按钮对应的tableView.scrollsToTop = YES, 其他的都为NO
+    for (NSUInteger i = 0; i < self.childViewControllers.count; i++) {
+        UIViewController *childVc = self.childViewControllers[i];
+        if (!childVc.isViewLoaded) continue;
+        
+        UIScrollView *scrollView = (UIScrollView *)childVc.view;
+        if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
+        
+        scrollView.scrollsToTop = (i == index);
+    }
 }
 
 /**
@@ -208,7 +226,9 @@
 }
 
 #pragma mark - 其他
-
+/**
+ 懒加载添加子控制器
+ */
 - (void)addChildVcViewIntoScrollView {
     
     CGFloat scrollViewW = self.scrollView.dl_width;
@@ -219,7 +239,7 @@
     //之前View已经添加到scrollView上面则不再加载
     if (childVc.isViewLoaded) return;
     
-    CGFloat scrollViewH = self.scrollView.dl_height;
+//    CGFloat scrollViewH = self.scrollView.dl_height;
 
     UIView *childVcView = childVc.view;
 //    childVcView.frame = CGRectMake(self.scrollView.bounds.origin.x, self.scrollView.bounds.origin.y, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);

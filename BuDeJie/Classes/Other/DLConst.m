@@ -16,3 +16,9 @@ CGFloat const DLNavMaxY = 64;
 
 /** 标题栏的高度 */
 CGFloat const DLTitlesViewH = 35;
+
+/** TabBarButton被重复点击的通知 */
+NSString * const DLTabBarButtonDidRepeatClickNotification = @"DLTabBarButtonDidRepeatClickNotification";
+
+/** TitleButton被重复点击的通知 */
+NSString * const DLTitleButtonDidRepeatClickNotification = @"DLTitleButtonDidRepeatClickNotification";

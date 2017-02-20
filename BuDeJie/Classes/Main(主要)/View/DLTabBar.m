@@ -9,15 +9,12 @@
 #import "DLTabBar.h"
 #import "DLPublishViewController.h"
 
-@implementation DLTabBar
+@interface DLTabBar ()
+/** 上一次点击的按钮 */
+@property (nonatomic,weak) UIControl *previousClickedTabBarButton;
+@end
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+@implementation DLTabBar
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -29,7 +26,7 @@
     CGFloat btnH = self.dl_height;
     
     NSInteger i = 0;
-    for (UIView *tabBarButton in self.subviews) {
+    for (UIControl *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             if (i == 2) {
                 i++;
@@ -37,6 +34,9 @@
             btnX = i * btnW;
             tabBarButton.frame = CGRectMake(btnX, 0, btnW, btnH);
             i++;
+            
+            //监听点击
+            [tabBarButton addTarget:self action:@selector(tabBarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
     
@@ -44,7 +44,21 @@
     [self setupPlusButton];
 }
 
-#pragma mark - 设置中间的加号按钮
+/**
+ 点击tabBarButton
+
+ @param tabBarButton 点击的tabBarButton
+ */
+- (void)tabBarButtonClick:(UIControl *)tabBarButton {
+    if (self.previousClickedTabBarButton == tabBarButton) {
+        //此次点击的按钮和上一次点击的是同一个按钮, 即双击了一个按钮, 发出双击通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:DLTabBarButtonDidRepeatClickNotification object:nil];
+    }
+    
+    self.previousClickedTabBarButton = tabBarButton;
+}
+
+/** 设置中间的加号按钮 */
 - (void)setupPlusButton {
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [plusButton setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];

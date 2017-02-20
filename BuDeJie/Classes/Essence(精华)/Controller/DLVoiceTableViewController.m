@@ -21,7 +21,26 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(DLNavMaxY + DLTitlesViewH, 0, DLTabBarH, 0);
     
-    DLFunc;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:DLTabBarButtonDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:DLTitleButtonDidRepeatClickNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 监听
+- (void)tabBarButtonDidRepeatClick {
+    //此时点击的不是精华按钮
+    if (self.view.window == nil) return;
+    //此时点击的是精华按钮, 但是显示的不是"全部"控制器
+    if (self.tableView.scrollsToTop == NO) return;
+    
+    NSLog(@"%@ - 刷新数据", self.class);
+}
+
+- (void)titleButtonDidRepeatClick {
+    [self tabBarButtonDidRepeatClick];
 }
 
 - (void)didReceiveMemoryWarning {
