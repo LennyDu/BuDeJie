@@ -10,6 +10,12 @@
 #import "UIBarButtonItem+Item.h"
 #import "DLTitleButton.h"
 
+#import "DLAllTableViewController.h"
+#import "DLVideoTableViewController.h"
+#import "DLVoiceTableViewController.h"
+#import "DLPictureTableViewController.h"
+#import "DLWordTableViewController.h"
+
 @interface DLEssenceViewController ()
 /** 标题栏 */
 @property (nonatomic,weak) UIView *titlesView;
@@ -27,11 +33,25 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //初始化子控制器
+    [self setupAllChildVC];
+    
     [self setupNavBar];
     
     [self setupScrollView];
     
     [self setupTitlesView];
+}
+
+/**
+ 初始化子控制器
+ */
+- (void)setupAllChildVC {
+    [self addChildViewController:[[DLAllTableViewController alloc] init]];
+    [self addChildViewController:[[DLVideoTableViewController alloc] init]];
+    [self addChildViewController:[[DLVoiceTableViewController alloc] init]];
+    [self addChildViewController:[[DLPictureTableViewController alloc] init]];
+    [self addChildViewController:[[DLWordTableViewController alloc] init]];
 }
 
 /**
@@ -58,7 +78,22 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor blueColor];
     scrollView.frame = self.view.bounds;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.pagingEnabled = YES;
     [self.view addSubview:scrollView];
+    
+    NSUInteger count = self.childViewControllers.count;
+    CGFloat scrollViewW = scrollView.dl_width;
+    CGFloat scrollViewH = scrollView.dl_height;
+    
+    for (NSUInteger i = 0; i < count; i++) {
+        UIView *childVcView = self.childViewControllers[i].view;
+        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
+        [scrollView addSubview:childVcView];
+    }
+    
+    scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
 }
 
 /**

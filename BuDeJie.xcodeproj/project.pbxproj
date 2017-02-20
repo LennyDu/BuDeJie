@@ -36,6 +36,11 @@
 		B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0C1E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		B8A67D141E42D15A00E4A708 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0D1E42D15A00E4A708 /* LaunchImage.png */; };
 		B8A67D151E42D15A00E4A708 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0E1E42D15A00E4A708 /* LaunchImage@2x.png */; };
+		B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */; };
+		B8B8B8E21E5A7595006A8EEC /* DLVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */; };
+		B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */; };
+		B8B8B8E81E5A75B6006A8EEC /* DLPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */; };
+		B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */; };
 		B8BE94141E4042EA0025065E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94121E4042EA0025065E /* Main.storyboard */; };
 		B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94151E4042EA0025065E /* Assets.xcassets */; };
 		B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94171E4042EA0025065E /* LaunchScreen.storyboard */; };
@@ -125,6 +130,16 @@
 		B8A67D0C1E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		B8A67D0D1E42D15A00E4A708 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		B8A67D0E1E42D15A00E4A708 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		B8B8B8DD1E5A7579006A8EEC /* DLAllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAllTableViewController.h; sourceTree = "<group>"; };
+		B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAllTableViewController.m; sourceTree = "<group>"; };
+		B8B8B8E01E5A7595006A8EEC /* DLVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVideoTableViewController.h; sourceTree = "<group>"; };
+		B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVideoTableViewController.m; sourceTree = "<group>"; };
+		B8B8B8E31E5A75A7006A8EEC /* DLVoiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVoiceTableViewController.h; sourceTree = "<group>"; };
+		B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVoiceTableViewController.m; sourceTree = "<group>"; };
+		B8B8B8E61E5A75B6006A8EEC /* DLPictureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPictureTableViewController.h; sourceTree = "<group>"; };
+		B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPictureTableViewController.m; sourceTree = "<group>"; };
+		B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWordTableViewController.h; sourceTree = "<group>"; };
+		B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWordTableViewController.m; sourceTree = "<group>"; };
 		B8BE94061E4042EA0025065E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE94131E4042EA0025065E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8BE94151E4042EA0025065E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -443,6 +458,16 @@
 			children = (
 				B81F84B51E4085E4002CB823 /* DLEssenceViewController.h */,
 				B81F84B61E4085E4002CB823 /* DLEssenceViewController.m */,
+				B8B8B8DD1E5A7579006A8EEC /* DLAllTableViewController.h */,
+				B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */,
+				B8B8B8E01E5A7595006A8EEC /* DLVideoTableViewController.h */,
+				B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */,
+				B8B8B8E31E5A75A7006A8EEC /* DLVoiceTableViewController.h */,
+				B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */,
+				B8B8B8E61E5A75B6006A8EEC /* DLPictureTableViewController.h */,
+				B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */,
+				B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */,
+				B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -852,6 +877,7 @@
 				B8A1869F1E47068E005CA154 /* DLSquareCollectionViewCell.m in Sources */,
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
+				B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */,
 				B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */,
 				B8A186A31E470C87005CA154 /* DLSquareItem.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
@@ -859,9 +885,11 @@
 				B8A67D061E42C99E00E4A708 /* DLAdViewController.m in Sources */,
 				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
 				B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */,
+				B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */,
 				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
 				B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */,
 				B8D199B41E45DE940066EF55 /* DLFastLoginView.m in Sources */,
+				B8B8B8E81E5A75B6006A8EEC /* DLPictureTableViewController.m in Sources */,
 				B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */,
 				B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */,
 				B8FFD3C41E407D9B00774227 /* main.m in Sources */,
@@ -876,7 +904,9 @@
 				B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */,
 				B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */,
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
+				B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
+				B8B8B8E21E5A7595006A8EEC /* DLVideoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
