@@ -17,6 +17,7 @@
 		B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84C6B721E4EEDED0006ECA3 /* DLWebViewController.xib */; };
 		B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C6B781E4F1B500006ECA3 /* DLFileTool.m */; };
 		B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B86865831E59CC6800BAC6CB /* DLTitleButton.m */; };
+		B87588F01E5BCD00006CE391 /* DLTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588EF1E5BCD00006CE391 /* DLTopicItem.m */; };
 		B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0511E4183F100FFEFF0 /* UIImage+Image.m */; };
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
@@ -101,6 +102,8 @@
 		B84C6B781E4F1B500006ECA3 /* DLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFileTool.m; sourceTree = "<group>"; };
 		B86865821E59CC6800BAC6CB /* DLTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTitleButton.h; sourceTree = "<group>"; };
 		B86865831E59CC6800BAC6CB /* DLTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTitleButton.m; sourceTree = "<group>"; };
+		B87588EE1E5BCD00006CE391 /* DLTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicItem.h; sourceTree = "<group>"; };
+		B87588EF1E5BCD00006CE391 /* DLTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicItem.m; sourceTree = "<group>"; };
 		B888C0501E4183F100FFEFF0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		B888C0511E4183F100FFEFF0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		B888C0571E41882800FFEFF0 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -478,6 +481,8 @@
 		B8FFD3AB1E407D9B00774227 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B87588EE1E5BCD00006CE391 /* DLTopicItem.h */,
+				B87588EF1E5BCD00006CE391 /* DLTopicItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */,
 				B8FFD3C41E407D9B00774227 /* main.m in Sources */,
 				B888C0631E4211CD00FFEFF0 /* UIBarButtonItem+Item.m in Sources */,
+				B87588F01E5BCD00006CE391 /* DLTopicItem.m in Sources */,
 				B81F84C01E40864B002CB823 /* DLFriendTrendViewController.m in Sources */,
 				B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */,
 				B81F84BA1E40860B002CB823 /* DLNewViewController.m in Sources */,

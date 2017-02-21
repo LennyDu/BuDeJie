@@ -7,10 +7,18 @@
 //
 
 #import "DLAllTableViewController.h"
+#import <AFNetworking.h>
+#import "DLTopicItem.h"
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
 
 @interface DLAllTableViewController ()
-/** 数据量 */
-@property (nonatomic,assign) NSInteger dataCount;
+/** 请求管理者 */
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
+/** 当前最后一条帖子数据的描述信息, 专门用来加载下一页, 这个标识可以识别下一页的数据 */
+@property (nonatomic,copy) NSString *maxtime;
+/** 所有的帖子数据 */
+@property (nonatomic,strong) NSMutableArray *topics;
 
 /** 下拉刷新控件 */
 @property (nonatomic,weak) UIView *header;
@@ -34,10 +42,15 @@
 
 @implementation DLAllTableViewController
 
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.dataCount = 5;
     
     self.view.backgroundColor = DLRandomColor;
     
@@ -120,19 +133,21 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.footer.hidden = (self.dataCount == 0);
-    return self.dataCount;
+    self.footer.hidden = (self.topics.count == 0);
+    return self.topics.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *ID = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
         cell.backgroundColor = [UIColor clearColor];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@-%zd", self.class, indexPath.row];
+    DLTopicItem *topic = self.topics[indexPath.row];
+    cell.textLabel.text = topic.name;
+    cell.detailTextLabel.text = topic.text;
     
     return cell;
 }
@@ -186,28 +201,63 @@
 
 #pragma mark - 数据处理
 - (void)loadNewData {
+    
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     NSLog(@"发送请求给服务器, 下拉刷新数据");
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //服务器返回数据
-        self.dataCount = 20;
+    //1.创建请求会话管理者
+//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    
+    //2.拼接参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @"41";
+    
+    //3.发送请求
+    [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        
+        self.topics = [DLTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
         
-        //结束刷新
         [self headerEndRefreshing];
-    });
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+        
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        
+        [self headerEndRefreshing];
+    }];
 }
 
 - (void)loadMoreData {
-    NSLog(@"发送请求给服务器 - 加载更多数据");
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //服务器返回数据
-        self.dataCount += 5;
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    //1.创建请求会话管理者
+//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    //2.拼接参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @"41";
+    parameters[@"maxtime"] = self.maxtime;
+    
+    //3.发送请求
+    [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        NSArray *moreTopics = [DLTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.topics addObjectsFromArray:moreTopics];
+        
         [self.tableView reloadData];
         
-        //结束刷新
         [self footerEndRefreshing];
-    });
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        
+        [self footerEndRefreshing];
+    }];
 }
 
 #pragma mark - header

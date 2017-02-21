@@ -10,6 +10,8 @@
 #import "UIView+Frame.h"
 #import "DLConst.h"
 
+#define DLAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/Lenny/Desktop/%@.plist", @#filename] atomically:YES];
+
 #define DLFunc NSLog(@"%s",__func__)
 
 #define DLScreenW [UIScreen mainScreen].bounds.size.width

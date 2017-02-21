@@ -18,6 +18,9 @@ UIKIT_EXTERN CGFloat const DLNavMaxY;
 /** 标题栏的高度 */
 UIKIT_EXTERN CGFloat const DLTitlesViewH;
 
+/** 统一的请求路径 */
+UIKIT_EXTERN NSString * const DLCommonURL;
+
 /** TabBarButton被重复点击的通知 */
 UIKIT_EXTERN NSString * const DLTabBarButtonDidRepeatClickNotification;
 

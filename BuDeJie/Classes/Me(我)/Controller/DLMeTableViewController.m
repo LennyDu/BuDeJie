@@ -86,12 +86,11 @@ CGFloat const margin = 1;
 - (void)loadData {
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     
-    NSString *url = @"http://api.budejie.com/api/api_open.php";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"square";
     parameters[@"c"] = @"topic";
     
-    [mgr GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [mgr GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *square_list = responseObject[@"square_list"];
         _items = [DLSquareItem mj_objectArrayWithKeyValuesArray:square_list];
         

@@ -17,6 +17,9 @@ CGFloat const DLNavMaxY = 64;
 /** 标题栏的高度 */
 CGFloat const DLTitlesViewH = 35;
 
+/** 同一的请求路径 */
+NSString * const DLCommonURL = @"http://api.budejie.com/api/api_open.php";
+
 /** TabBarButton被重复点击的通知 */
 NSString * const DLTabBarButtonDidRepeatClickNotification = @"DLTabBarButtonDidRepeatClickNotification";
 
