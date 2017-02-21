@@ -19,10 +19,7 @@
 		B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B86865831E59CC6800BAC6CB /* DLTitleButton.m */; };
 		B87588F01E5BCD00006CE391 /* DLTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588EF1E5BCD00006CE391 /* DLTopicItem.m */; };
 		B87588F31E5BDC6D006CE391 /* DLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588F21E5BDC6D006CE391 /* DLTopicCell.m */; };
-		B87588F91E5BDF87006CE391 /* DLVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588F81E5BDF87006CE391 /* DLVideoCell.m */; };
-		B87588FC1E5BDFF7006CE391 /* DLVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588FB1E5BDFF7006CE391 /* DLVoiceCell.m */; };
-		B87588FF1E5BE00F006CE391 /* DLPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B87588FE1E5BE00F006CE391 /* DLPictureCell.m */; };
-		B87589021E5BE024006CE391 /* DLWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B87589011E5BE024006CE391 /* DLWordCell.m */; };
+		B875890D1E5C3058006CE391 /* DLTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B875890C1E5C3058006CE391 /* DLTopicCell.xib */; };
 		B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0511E4183F100FFEFF0 /* UIImage+Image.m */; };
 		B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C0581E41882800FFEFF0 /* DLTabBarController.m */; };
 		B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B888C05B1E41F6F200FFEFF0 /* DLTabBar.m */; };
@@ -111,14 +108,7 @@
 		B87588EF1E5BCD00006CE391 /* DLTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicItem.m; sourceTree = "<group>"; };
 		B87588F11E5BDC6D006CE391 /* DLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicCell.h; sourceTree = "<group>"; };
 		B87588F21E5BDC6D006CE391 /* DLTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicCell.m; sourceTree = "<group>"; };
-		B87588F71E5BDF87006CE391 /* DLVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVideoCell.h; sourceTree = "<group>"; };
-		B87588F81E5BDF87006CE391 /* DLVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVideoCell.m; sourceTree = "<group>"; };
-		B87588FA1E5BDFF7006CE391 /* DLVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVoiceCell.h; sourceTree = "<group>"; };
-		B87588FB1E5BDFF7006CE391 /* DLVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVoiceCell.m; sourceTree = "<group>"; };
-		B87588FD1E5BE00F006CE391 /* DLPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPictureCell.h; sourceTree = "<group>"; };
-		B87588FE1E5BE00F006CE391 /* DLPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPictureCell.m; sourceTree = "<group>"; };
-		B87589001E5BE024006CE391 /* DLWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWordCell.h; sourceTree = "<group>"; };
-		B87589011E5BE024006CE391 /* DLWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWordCell.m; sourceTree = "<group>"; };
+		B875890C1E5C3058006CE391 /* DLTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLTopicCell.xib; sourceTree = "<group>"; };
 		B888C0501E4183F100FFEFF0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		B888C0511E4183F100FFEFF0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		B888C0571E41882800FFEFF0 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -509,14 +499,7 @@
 				B86865831E59CC6800BAC6CB /* DLTitleButton.m */,
 				B87588F11E5BDC6D006CE391 /* DLTopicCell.h */,
 				B87588F21E5BDC6D006CE391 /* DLTopicCell.m */,
-				B87588F71E5BDF87006CE391 /* DLVideoCell.h */,
-				B87588F81E5BDF87006CE391 /* DLVideoCell.m */,
-				B87588FA1E5BDFF7006CE391 /* DLVoiceCell.h */,
-				B87588FB1E5BDFF7006CE391 /* DLVoiceCell.m */,
-				B87588FD1E5BE00F006CE391 /* DLPictureCell.h */,
-				B87588FE1E5BE00F006CE391 /* DLPictureCell.m */,
-				B87589001E5BE024006CE391 /* DLWordCell.h */,
-				B87589011E5BE024006CE391 /* DLWordCell.m */,
+				B875890C1E5C3058006CE391 /* DLTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -828,6 +811,7 @@
 				B8A67D141E42D15A00E4A708 /* LaunchImage.png in Resources */,
 				B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */,
 				B8A67D111E42D15A00E4A708 /* LaunchImage-700@2x.png in Resources */,
+				B875890D1E5C3058006CE391 /* DLTopicCell.xib in Resources */,
 				B8A1869B1E46FF66005CA154 /* DLMeTableViewController.storyboard in Resources */,
 				B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */,
 				B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -916,12 +900,10 @@
 				B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */,
 				B8A186A31E470C87005CA154 /* DLSquareItem.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
-				B87588FC1E5BDFF7006CE391 /* DLVoiceCell.m in Sources */,
 				B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */,
 				B8A67D061E42C99E00E4A708 /* DLAdViewController.m in Sources */,
 				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
 				B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */,
-				B87589021E5BE024006CE391 /* DLWordCell.m in Sources */,
 				B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */,
 				B8B8B8EE1E5A7BB8006A8EEC /* DLConst.m in Sources */,
 				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
@@ -937,9 +919,7 @@
 				B81F84C31E408687002CB823 /* DLMeTableViewController.m in Sources */,
 				B81F84BA1E40860B002CB823 /* DLNewViewController.m in Sources */,
 				B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */,
-				B87588F91E5BDF87006CE391 /* DLVideoCell.m in Sources */,
 				B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */,
-				B87588FF1E5BE00F006CE391 /* DLPictureCell.m in Sources */,
 				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B87588F31E5BDC6D006CE391 /* DLTopicCell.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,

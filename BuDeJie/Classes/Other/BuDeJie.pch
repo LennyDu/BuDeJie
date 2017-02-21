@@ -9,6 +9,7 @@
 #import "UIImage+Image.h"
 #import "UIView+Frame.h"
 #import "DLConst.h"
+#import "UIImage+Image.h"
 
 #define DLAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/Lenny/Desktop/%@.plist", @#filename] atomically:YES];
 

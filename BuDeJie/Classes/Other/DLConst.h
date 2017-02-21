@@ -21,6 +21,9 @@ UIKIT_EXTERN CGFloat const DLTitlesViewH;
 /** 统一的请求路径 */
 UIKIT_EXTERN NSString * const DLCommonURL;
 
+/** 全局统一的间距 */
+UIKIT_EXTERN CGFloat const DLMargin;
+
 /** TabBarButton被重复点击的通知 */
 UIKIT_EXTERN NSString * const DLTabBarButtonDidRepeatClickNotification;
 

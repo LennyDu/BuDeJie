@@ -12,10 +12,7 @@
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
 
-#import "DLVideoCell.h"
-#import "DLVoiceCell.h"
-#import "DLPictureCell.h"
-#import "DLWordCell.h"
+#import "DLTopicCell.h"
 
 @interface DLAllTableViewController ()
 /** 请求管理者 */
@@ -47,10 +44,7 @@
 
 @implementation DLAllTableViewController
 
-static NSString * const DLVideoCellId = @"DLVideoCellId";
-static NSString * const DLVoiceCellId = @"DLVoiceCellId";
-static NSString * const DLPictureCellId = @"DLPictureCellId";
-static NSString * const DLWordCellId = @"DLWordCellId";
+static NSString *const DLTopicCellId = @"DLTopicCellId";
 
 - (AFHTTPSessionManager *)manager {
     if (!_manager) {
@@ -66,12 +60,11 @@ static NSString * const DLWordCellId = @"DLWordCellId";
     
     self.tableView.contentInset = UIEdgeInsetsMake(DLNavMaxY + DLTitlesViewH, 0, DLTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.rowHeight = 200;
     
     //注册cell
-    [self.tableView registerClass:[DLVideoCell class] forCellReuseIdentifier:DLVideoCellId];
-    [self.tableView registerClass:[DLVoiceCell class] forCellReuseIdentifier:DLVoiceCellId];
-    [self.tableView registerClass:[DLPictureCell class] forCellReuseIdentifier:DLPictureCellId];
-    [self.tableView registerClass:[DLWordCell class] forCellReuseIdentifier:DLWordCellId];
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([DLTopicCell class]) bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:DLTopicCellId];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:DLTabBarButtonDidRepeatClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:DLTitleButtonDidRepeatClickNotification object:nil];
@@ -154,20 +147,9 @@ static NSString * const DLWordCellId = @"DLWordCellId";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DLTopicItem *topic = self.topics[indexPath.row];
-    DLTopicCell *cell = nil;
+    DLTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:DLTopicCellId];
     
-    if (topic.type == 10) {
-        cell = [tableView dequeueReusableCellWithIdentifier:DLPictureCellId];
-    } else if (topic.type == 29) {
-        cell = [tableView dequeueReusableCellWithIdentifier:DLWordCellId];
-    } else if (topic.type == 31) {
-        cell = [tableView dequeueReusableCellWithIdentifier:DLVoiceCellId];
-    } else if (topic.type == 41) {
-        cell = [tableView dequeueReusableCellWithIdentifier:DLVideoCellId];
-    }
-    
-    cell.topic = topic;
+    cell.topic = self.topics[indexPath.row];
     
     return cell;
 }
@@ -244,8 +226,9 @@ static NSString * const DLWordCellId = @"DLWordCellId";
         [self headerEndRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
-        
-        [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        if (error.code != NSURLErrorCancelled) {
+            [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        }
         
         [self headerEndRefreshing];
     }];
@@ -274,7 +257,9 @@ static NSString * const DLWordCellId = @"DLWordCellId";
         
         [self footerEndRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        if (error.code != NSURLErrorCancelled) {
+            [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
+        }
         
         [self footerEndRefreshing];
     }];

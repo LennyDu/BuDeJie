@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    DLTopicTypeAll = 1,
+    DLTopicTypePicture = 10,
+    DLTopicTypeWord = 29,
+    DLTopicTypeVoice = 31,
+    DLTopicTypeVideo = 41
+} DLTopicType;
+
 @interface DLTopicItem : NSObject
 /** 用户的名字 */
 @property (nonatomic,copy) NSString *name;

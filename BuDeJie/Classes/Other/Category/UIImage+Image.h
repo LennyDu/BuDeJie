@@ -10,4 +10,6 @@
 
 @interface UIImage (Image)
 + (UIImage *)imageOriginalWithName:(NSString *)imageName;
+- (instancetype)dl_circleImage;
++ (instancetype)dl_circleImageNamed:(NSString *)name;
 @end
