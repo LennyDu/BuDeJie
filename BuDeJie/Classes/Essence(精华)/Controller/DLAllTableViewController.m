@@ -56,11 +56,14 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = DLRandomColor;
+    self.view.backgroundColor = DLColor(206, 206, 206);
     
     self.tableView.contentInset = UIEdgeInsetsMake(DLNavMaxY + DLTitlesViewH, 0, DLTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    self.tableView.rowHeight = 200;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.rowHeight = 200;
+    //设置一个cell的估算高度
+    self.tableView.estimatedRowHeight = 100;
     
     //注册cell
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([DLTopicCell class]) bundle:nil];
@@ -155,6 +158,28 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
 }
 
 #pragma mark - 代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DLFunc;
+    DLTopicItem *topic = self.topics[indexPath.row];
+    return topic.cellHeight;
+    
+//    DLTopicItem *topic = self.topics[indexPath.row];
+//    CGFloat cellHeight = 0;
+//    
+//    //文字Label的Y为 imageH+2*margin = 55
+//    cellHeight += 55;
+//    
+//    //文字的高度
+//    CGSize textMaxSize = CGSizeMake(DLScreenW - 2 * DLMargin, MAXFLOAT);
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+//    cellHeight += [topic.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size.height + DLMargin;
+//    
+//    //工具条
+//    cellHeight += 35 + DLMargin;
+//    
+//    return cellHeight;
+}
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     //如果正在进行下拉刷新, 直接返回
@@ -214,7 +239,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"41";
+    parameters[@"type"] = @"29";
     
     //3.发送请求
     [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -244,7 +269,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"41";
+    parameters[@"type"] = @"29";
     parameters[@"maxtime"] = self.maxtime;
     
     //3.发送请求
@@ -296,7 +321,6 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
         inset.top -= self.header.dl_height;
         self.tableView.contentInset = inset;
     }];
-
 }
 
 #pragma mark - footer
