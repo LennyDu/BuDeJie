@@ -20,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
-
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+@property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
 @end
 
 @implementation DLTopicCell
@@ -56,6 +57,20 @@
     [self setupButtonTitle:self.caiButton number:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton number:topic.comment placeholder:@"评论"];
+    
+    if (topic.top_cmt.count) {
+        self.topCmtView.hidden = NO;
+        
+        NSDictionary *cmt = topic.top_cmt.firstObject;
+        NSString *content = cmt[@"content"];
+        if (content.length == 0) {
+            content = @"[语音评论]";
+        }
+        NSString *username = cmt[@"user"][@"username"];
+        self.topCmtLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
 }
 
 - (void)setupButtonTitle:(UIButton *)button number:(NSInteger)number placeholder:(NSString *)placeholder {

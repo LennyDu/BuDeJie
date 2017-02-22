@@ -159,7 +159,6 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
 
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DLFunc;
     DLTopicItem *topic = self.topics[indexPath.row];
     return topic.cellHeight;
     
@@ -239,10 +238,11 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @"1";
     
     //3.发送请求
     [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLAFNWriteToPlist(all)
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
         self.topics = [DLTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -269,7 +269,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @"1";
     parameters[@"maxtime"] = self.maxtime;
     
     //3.发送请求

@@ -38,6 +38,9 @@ typedef enum {
 /** 帖子类型 1为全部，10为图片，29为段子，31为音频，41为视频 */
 @property (nonatomic,assign) NSInteger type;
 
+/** 最热评论 */
+@property (nonatomic,strong) NSArray *top_cmt;
+
 /** 为了避免每次都计算cell的高度, 新增一个高度属性 */
 @property (nonatomic,assign) CGFloat cellHeight;
 @end

@@ -153,6 +153,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd9-PJ-maK" userLabel="最热评论-整体">
+                        <rect key="frame" x="10" y="221.5" width="355" height="40.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNT-VC-lhE" userLabel="最热评论-标题">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E72-qg-OvV" userLabel="最热评论-内容">
+                                <rect key="frame" x="0.0" y="21" width="355" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LNT-VC-lhE" firstAttribute="top" secondItem="Pd9-PJ-maK" secondAttribute="top" id="1vi-ga-mYH"/>
+                            <constraint firstAttribute="bottom" secondItem="E72-qg-OvV" secondAttribute="bottom" id="K8o-Ri-LAX"/>
+                            <constraint firstItem="E72-qg-OvV" firstAttribute="leading" secondItem="Pd9-PJ-maK" secondAttribute="leading" id="KZ1-4b-0g6"/>
+                            <constraint firstItem="LNT-VC-lhE" firstAttribute="leading" secondItem="Pd9-PJ-maK" secondAttribute="leading" id="X25-Gg-oPc"/>
+                            <constraint firstAttribute="trailing" secondItem="E72-qg-OvV" secondAttribute="trailing" id="YYQ-2r-1p5"/>
+                            <constraint firstItem="E72-qg-OvV" firstAttribute="top" secondItem="LNT-VC-lhE" secondAttribute="bottom" id="hzb-KF-dNp"/>
+                            <constraint firstItem="E72-qg-OvV" firstAttribute="top" secondItem="LNT-VC-lhE" secondAttribute="bottom" id="rUU-p2-62b"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="P9q-AC-iXU" firstAttribute="trailing" secondItem="lFJ-ad-KSr" secondAttribute="trailing" id="5f9-Kt-W4l"/>
@@ -161,12 +188,15 @@
                     <constraint firstItem="P9q-AC-iXU" firstAttribute="top" secondItem="A2I-MX-efY" secondAttribute="bottom" constant="10" id="P8t-vv-8zH"/>
                     <constraint firstItem="P9q-AC-iXU" firstAttribute="leading" secondItem="A2I-MX-efY" secondAttribute="leading" id="Pho-f1-Mpm"/>
                     <constraint firstAttribute="bottom" secondItem="iNT-PO-O3a" secondAttribute="bottom" id="STX-EN-ta5"/>
+                    <constraint firstItem="Pd9-PJ-maK" firstAttribute="leading" secondItem="P9q-AC-iXU" secondAttribute="leading" id="TrM-TH-GhV"/>
+                    <constraint firstItem="iNT-PO-O3a" firstAttribute="top" secondItem="Pd9-PJ-maK" secondAttribute="bottom" constant="10" id="U3e-9D-KWC"/>
                     <constraint firstItem="lFJ-ad-KSr" firstAttribute="top" secondItem="wQ5-PL-6rX" secondAttribute="top" constant="10" id="Xeu-Jf-ygZ"/>
                     <constraint firstItem="cFt-V9-3Ek" firstAttribute="leading" secondItem="A2I-MX-efY" secondAttribute="trailing" constant="10" id="Y6e-7h-Fhy"/>
                     <constraint firstItem="A2I-MX-efY" firstAttribute="leading" secondItem="wQ5-PL-6rX" secondAttribute="leading" constant="10" id="Zzl-5K-mCc"/>
                     <constraint firstAttribute="trailing" secondItem="lFJ-ad-KSr" secondAttribute="trailing" constant="10" id="agD-EX-gqN"/>
                     <constraint firstAttribute="trailing" secondItem="iNT-PO-O3a" secondAttribute="trailing" id="gVI-vX-JNU"/>
                     <constraint firstItem="ss1-NZ-OhD" firstAttribute="leading" secondItem="cFt-V9-3Ek" secondAttribute="leading" id="hzm-B9-Oyh"/>
+                    <constraint firstItem="Pd9-PJ-maK" firstAttribute="trailing" secondItem="P9q-AC-iXU" secondAttribute="trailing" id="oSL-Mu-PQJ"/>
                     <constraint firstItem="ss1-NZ-OhD" firstAttribute="bottom" secondItem="A2I-MX-efY" secondAttribute="bottom" id="oz6-rc-VVW"/>
                     <constraint firstItem="iNT-PO-O3a" firstAttribute="leading" secondItem="wQ5-PL-6rX" secondAttribute="leading" id="v6o-by-oF3"/>
                 </constraints>
@@ -180,6 +210,8 @@
                 <outlet property="profileImageView" destination="A2I-MX-efY" id="ioA-9p-Jao"/>
                 <outlet property="repostButton" destination="bSE-Nj-MuD" id="bIa-NR-LJN"/>
                 <outlet property="text_label" destination="P9q-AC-iXU" id="zr7-w2-yZ7"/>
+                <outlet property="topCmtLabel" destination="E72-qg-OvV" id="6mK-09-cnR"/>
+                <outlet property="topCmtView" destination="Pd9-PJ-maK" id="PKK-82-vsf"/>
             </connections>
             <point key="canvasLocation" x="16.5" y="-106"/>
         </tableViewCell>
