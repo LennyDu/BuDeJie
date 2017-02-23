@@ -10,11 +10,11 @@
 #import "UIBarButtonItem+Item.h"
 #import "DLTitleButton.h"
 
-#import "DLAllTableViewController.h"
-#import "DLVideoTableViewController.h"
-#import "DLVoiceTableViewController.h"
-#import "DLPictureTableViewController.h"
-#import "DLWordTableViewController.h"
+#import "DLAllViewController.h"
+#import "DLVideoViewController.h"
+#import "DLVoiceViewController.h"
+#import "DLPictureViewController.h"
+#import "DLWordViewController.h"
 
 @interface DLEssenceViewController () <UIScrollViewDelegate>
 /** ScrollView */
@@ -53,11 +53,11 @@
  初始化子控制器
  */
 - (void)setupAllChildVC {
-    [self addChildViewController:[[DLAllTableViewController alloc] init]];
-    [self addChildViewController:[[DLVideoTableViewController alloc] init]];
-    [self addChildViewController:[[DLVoiceTableViewController alloc] init]];
-    [self addChildViewController:[[DLPictureTableViewController alloc] init]];
-    [self addChildViewController:[[DLWordTableViewController alloc] init]];
+    [self addChildViewController:[[DLAllViewController alloc] init]];
+    [self addChildViewController:[[DLVideoViewController alloc] init]];
+    [self addChildViewController:[[DLVoiceViewController alloc] init]];
+    [self addChildViewController:[[DLPictureViewController alloc] init]];
+    [self addChildViewController:[[DLWordViewController alloc] init]];
 }
 
 /**

@@ -39,11 +39,6 @@
 		B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0C1E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		B8A67D141E42D15A00E4A708 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0D1E42D15A00E4A708 /* LaunchImage.png */; };
 		B8A67D151E42D15A00E4A708 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A67D0E1E42D15A00E4A708 /* LaunchImage@2x.png */; };
-		B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */; };
-		B8B8B8E21E5A7595006A8EEC /* DLVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */; };
-		B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */; };
-		B8B8B8E81E5A75B6006A8EEC /* DLPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */; };
-		B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */; };
 		B8B8B8EE1E5A7BB8006A8EEC /* DLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B8B8ED1E5A7BB8006A8EEC /* DLConst.m */; };
 		B8BE94141E4042EA0025065E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94121E4042EA0025065E /* Main.storyboard */; };
 		B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BE94151E4042EA0025065E /* Assets.xcassets */; };
@@ -68,6 +63,12 @@
 		B8E58E601E5E877100EA5888 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */; };
 		B8E58E641E5ECA1900EA5888 /* DLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */; };
 		B8E58E651E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */; };
+		B8E58E6D1E5EF53B00EA5888 /* DLTopicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E6C1E5EF53B00EA5888 /* DLTopicTableViewController.m */; };
+		B8E58E701E5EF56100EA5888 /* DLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E6F1E5EF56100EA5888 /* DLAllViewController.m */; };
+		B8E58E731E5EF61600EA5888 /* DLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E721E5EF61600EA5888 /* DLVideoViewController.m */; };
+		B8E58E761E5EF62E00EA5888 /* DLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E751E5EF62E00EA5888 /* DLVoiceViewController.m */; };
+		B8E58E791E5EF65500EA5888 /* DLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E781E5EF65500EA5888 /* DLPictureViewController.m */; };
+		B8E58E7C1E5EF66900EA5888 /* DLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E7B1E5EF66900EA5888 /* DLWordViewController.m */; };
 		B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */; };
 		B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */; };
 		B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */; };
@@ -148,16 +149,6 @@
 		B8A67D0C1E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		B8A67D0D1E42D15A00E4A708 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		B8A67D0E1E42D15A00E4A708 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
-		B8B8B8DD1E5A7579006A8EEC /* DLAllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAllTableViewController.h; sourceTree = "<group>"; };
-		B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAllTableViewController.m; sourceTree = "<group>"; };
-		B8B8B8E01E5A7595006A8EEC /* DLVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVideoTableViewController.h; sourceTree = "<group>"; };
-		B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVideoTableViewController.m; sourceTree = "<group>"; };
-		B8B8B8E31E5A75A7006A8EEC /* DLVoiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVoiceTableViewController.h; sourceTree = "<group>"; };
-		B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVoiceTableViewController.m; sourceTree = "<group>"; };
-		B8B8B8E61E5A75B6006A8EEC /* DLPictureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPictureTableViewController.h; sourceTree = "<group>"; };
-		B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPictureTableViewController.m; sourceTree = "<group>"; };
-		B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWordTableViewController.h; sourceTree = "<group>"; };
-		B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWordTableViewController.m; sourceTree = "<group>"; };
 		B8B8B8EC1E5A7BB8006A8EEC /* DLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLConst.h; sourceTree = "<group>"; };
 		B8B8B8ED1E5A7BB8006A8EEC /* DLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLConst.m; sourceTree = "<group>"; };
 		B8BE94061E4042EA0025065E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +191,18 @@
 		B8E58E611E5ECA1900EA5888 /* DLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSeeBigPictureViewController.h; sourceTree = "<group>"; };
 		B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSeeBigPictureViewController.m; sourceTree = "<group>"; };
 		B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		B8E58E6B1E5EF53B00EA5888 /* DLTopicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicTableViewController.h; sourceTree = "<group>"; };
+		B8E58E6C1E5EF53B00EA5888 /* DLTopicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicTableViewController.m; sourceTree = "<group>"; };
+		B8E58E6E1E5EF56100EA5888 /* DLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAllViewController.h; sourceTree = "<group>"; };
+		B8E58E6F1E5EF56100EA5888 /* DLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAllViewController.m; sourceTree = "<group>"; };
+		B8E58E711E5EF61600EA5888 /* DLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVideoViewController.h; sourceTree = "<group>"; };
+		B8E58E721E5EF61600EA5888 /* DLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVideoViewController.m; sourceTree = "<group>"; };
+		B8E58E741E5EF62E00EA5888 /* DLVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVoiceViewController.h; sourceTree = "<group>"; };
+		B8E58E751E5EF62E00EA5888 /* DLVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVoiceViewController.m; sourceTree = "<group>"; };
+		B8E58E771E5EF65500EA5888 /* DLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPictureViewController.h; sourceTree = "<group>"; };
+		B8E58E781E5EF65500EA5888 /* DLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPictureViewController.m; sourceTree = "<group>"; };
+		B8E58E7A1E5EF66900EA5888 /* DLWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLWordViewController.h; sourceTree = "<group>"; };
+		B8E58E7B1E5EF66900EA5888 /* DLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLWordViewController.m; sourceTree = "<group>"; };
 		B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagViewController.h; sourceTree = "<group>"; };
 		B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagViewController.m; sourceTree = "<group>"; };
 		B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagCell.h; sourceTree = "<group>"; };
@@ -462,6 +465,25 @@
 			path = BuDeJieUITests;
 			sourceTree = "<group>";
 		};
+		B8E58E6A1E5EF53B00EA5888 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				B8E58E6B1E5EF53B00EA5888 /* DLTopicTableViewController.h */,
+				B8E58E6C1E5EF53B00EA5888 /* DLTopicTableViewController.m */,
+				B8E58E6E1E5EF56100EA5888 /* DLAllViewController.h */,
+				B8E58E6F1E5EF56100EA5888 /* DLAllViewController.m */,
+				B8E58E711E5EF61600EA5888 /* DLVideoViewController.h */,
+				B8E58E721E5EF61600EA5888 /* DLVideoViewController.m */,
+				B8E58E741E5EF62E00EA5888 /* DLVoiceViewController.h */,
+				B8E58E751E5EF62E00EA5888 /* DLVoiceViewController.m */,
+				B8E58E771E5EF65500EA5888 /* DLPictureViewController.h */,
+				B8E58E781E5EF65500EA5888 /* DLPictureViewController.m */,
+				B8E58E7A1E5EF66900EA5888 /* DLWordViewController.h */,
+				B8E58E7B1E5EF66900EA5888 /* DLWordViewController.m */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
 		B8FFD3A81E407D9B00774227 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,19 +516,10 @@
 			children = (
 				B81F84B51E4085E4002CB823 /* DLEssenceViewController.h */,
 				B81F84B61E4085E4002CB823 /* DLEssenceViewController.m */,
-				B8B8B8DD1E5A7579006A8EEC /* DLAllTableViewController.h */,
-				B8B8B8DE1E5A7579006A8EEC /* DLAllTableViewController.m */,
-				B8B8B8E01E5A7595006A8EEC /* DLVideoTableViewController.h */,
-				B8B8B8E11E5A7595006A8EEC /* DLVideoTableViewController.m */,
-				B8B8B8E31E5A75A7006A8EEC /* DLVoiceTableViewController.h */,
-				B8B8B8E41E5A75A7006A8EEC /* DLVoiceTableViewController.m */,
-				B8B8B8E61E5A75B6006A8EEC /* DLPictureTableViewController.h */,
-				B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */,
-				B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */,
-				B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */,
 				B8E58E611E5ECA1900EA5888 /* DLSeeBigPictureViewController.h */,
 				B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */,
 				B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */,
+				B8E58E6A1E5EF53B00EA5888 /* Topic */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -934,24 +947,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */,
+				B8E58E701E5EF56100EA5888 /* DLAllViewController.m in Sources */,
 				B8A1869F1E47068E005CA154 /* DLSquareCollectionViewCell.m in Sources */,
 				B8E58E511E5E6A0400EA5888 /* DLTopicVideoView.m in Sources */,
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
-				B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */,
 				B86865841E59CC6800BAC6CB /* DLTitleButton.m in Sources */,
+				B8E58E7C1E5EF66900EA5888 /* DLWordViewController.m in Sources */,
 				B8A186A31E470C87005CA154 /* DLSquareItem.m in Sources */,
+				B8E58E731E5EF61600EA5888 /* DLVideoViewController.m in Sources */,
+				B8E58E791E5EF65500EA5888 /* DLPictureViewController.m in Sources */,
 				B81F84B71E4085E4002CB823 /* DLEssenceViewController.m in Sources */,
 				B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */,
 				B8A67D061E42C99E00E4A708 /* DLAdViewController.m in Sources */,
 				B888C0661E4218EB00FFEFF0 /* DLNavigationController.m in Sources */,
+				B8E58E6D1E5EF53B00EA5888 /* DLTopicTableViewController.m in Sources */,
 				B8D199AF1E45CFFA0066EF55 /* DLLoginRegisterView.m in Sources */,
-				B8B8B8DF1E5A7579006A8EEC /* DLAllTableViewController.m in Sources */,
 				B8B8B8EE1E5A7BB8006A8EEC /* DLConst.m in Sources */,
 				B888C06D1E421C4500FFEFF0 /* DLSettingViewController.m in Sources */,
 				B81F84BD1E408627002CB823 /* DLPublishViewController.m in Sources */,
 				B8D199B41E45DE940066EF55 /* DLFastLoginView.m in Sources */,
-				B8B8B8E81E5A75B6006A8EEC /* DLPictureTableViewController.m in Sources */,
 				B888C0521E4183F100FFEFF0 /* UIImage+Image.m in Sources */,
 				B888C05C1E41F6F200FFEFF0 /* DLTabBar.m in Sources */,
 				B8FFD3C41E407D9B00774227 /* main.m in Sources */,
@@ -965,16 +980,15 @@
 				B8E58E5B1E5E6AD700EA5888 /* DLTopicPictureView.m in Sources */,
 				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B87588F31E5BDC6D006CE391 /* DLTopicCell.m in Sources */,
+				B8E58E761E5EF62E00EA5888 /* DLVoiceViewController.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,
 				B8E58E561E5E6AA500EA5888 /* DLTopicVoiceView.m in Sources */,
 				B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */,
 				B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */,
 				B8E58E601E5E877100EA5888 /* UIImageView+Download.m in Sources */,
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
-				B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
 				B8E58E641E5ECA1900EA5888 /* DLSeeBigPictureViewController.m in Sources */,
-				B8B8B8E21E5A7595006A8EEC /* DLVideoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

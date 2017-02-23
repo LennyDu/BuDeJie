@@ -8,6 +8,7 @@
 
 #import "UIImageView+Download.h"
 #import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
 
 @implementation UIImageView (Download)
 - (void)dl_setOriginImage:(NSString *)originImageUrl thumbnailImage:(NSString *)thumbnailImageUrl placeholder:(UIImage *)placeholder completed:(SDExternalCompletionBlock)completedBlock {
@@ -17,8 +18,9 @@
     //获取原图
     UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:originImageUrl];
     if (originImage) { //原图已经下载过
-        self.image = originImage;
-        completedBlock(originImage, nil, 0, [NSURL URLWithString:originImageUrl]);
+        [self sd_setImageWithURL:[NSURL URLWithString:originImageUrl] placeholderImage:placeholder completed:completedBlock];
+//        self.image = originImage;
+//        completedBlock(originImage, nil, 0, [NSURL URLWithString:originImageUrl]);
     } else { //原图未下载过
         if (mgr.isReachableViaWiFi) { //Wi-Fi网络
             [self sd_setImageWithURL:[NSURL URLWithString:originImageUrl] placeholderImage:placeholder completed:completedBlock];
@@ -33,9 +35,11 @@
         } else {//没有网络
             UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:thumbnailImageUrl];
             if (thumbnailImage) {//下载过缩略图
-                self.image = thumbnailImage;
+//                self.image = thumbnailImage;
+                [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageUrl] placeholderImage:placeholder completed:completedBlock];
             } else {//没下载过, 也没有网络, 只能用占位图片咯
-                self.image = placeholder;
+//                self.image = placeholder;
+                [self sd_setImageWithURL:nil placeholderImage:placeholder completed:completedBlock];
             }
         }
     }

@@ -1,20 +1,19 @@
 //
-//  DLAllTableViewController.m
+//  DLTopicTableViewController.m
 //  BuDeJie
 //
-//  Created by Lenny on 2017/2/20.
+//  Created by Lenny on 2017/2/23.
 //  Copyright © 2017年 Lenny. All rights reserved.
 //
 
-#import "DLAllTableViewController.h"
+#import "DLTopicTableViewController.h"
 #import <AFNetworking.h>
-#import "DLTopicItem.h"
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
-
+#import <SDImageCache.h>
 #import "DLTopicCell.h"
 
-@interface DLAllTableViewController ()
+@interface DLTopicTableViewController ()
 /** 请求管理者 */
 @property (nonatomic,strong) AFHTTPSessionManager *manager;
 /** 当前最后一条帖子数据的描述信息, 专门用来加载下一页, 这个标识可以识别下一页的数据 */
@@ -42,7 +41,12 @@
 
 @end
 
-@implementation DLAllTableViewController
+@implementation DLTopicTableViewController
+
+/** 在这里实现type方法,仅仅是为了消除警告 */
+- (DLTopicType)type {
+    return 0;
+}
 
 static NSString *const DLTopicCellId = @"DLTopicCellId";
 
@@ -61,9 +65,9 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     self.tableView.contentInset = UIEdgeInsetsMake(DLNavMaxY + DLTitlesViewH, 0, DLTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    self.tableView.rowHeight = 200;
+    //    self.tableView.rowHeight = 200;
     //设置一个cell的估算高度
-//    self.tableView.estimatedRowHeight = 100;
+    //    self.tableView.estimatedRowHeight = 100;
     
     //注册cell
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([DLTopicCell class]) bundle:nil];
@@ -162,27 +166,27 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     DLTopicItem *topic = self.topics[indexPath.row];
     return topic.cellHeight;
     
-//    DLTopicItem *topic = self.topics[indexPath.row];
-//    CGFloat cellHeight = 0;
-//    
-//    //文字Label的Y为 imageH+2*margin = 55
-//    cellHeight += 55;
-//    
-//    //文字的高度
-//    CGSize textMaxSize = CGSizeMake(DLScreenW - 2 * DLMargin, MAXFLOAT);
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-//    cellHeight += [topic.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size.height + DLMargin;
-//    
-//    //工具条
-//    cellHeight += 35 + DLMargin;
-//    
-//    return cellHeight;
+    //    DLTopicItem *topic = self.topics[indexPath.row];
+    //    CGFloat cellHeight = 0;
+    //
+    //    //文字Label的Y为 imageH+2*margin = 55
+    //    cellHeight += 55;
+    //
+    //    //文字的高度
+    //    CGSize textMaxSize = CGSizeMake(DLScreenW - 2 * DLMargin, MAXFLOAT);
+    //    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    //    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    //    cellHeight += [topic.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size.height + DLMargin;
+    //
+    //    //工具条
+    //    cellHeight += 35 + DLMargin;
+    //
+    //    return cellHeight;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     //如果正在进行下拉刷新, 直接返回
-//    if (self.headerRefreshing) return;
+    //    if (self.headerRefreshing) return;
     
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.dl_height);
     if (self.tableView.contentOffset.y <= offsetY) {
@@ -218,7 +222,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     if (self.tableView.contentSize.height == 0) return;
     
     //正在刷新, 直接返回
-//    if (self.isFooterRefreshing) return;
+    //    if (self.isFooterRefreshing) return;
     
     CGFloat offsetY = self.tableView.contentSize.height + self.tableView.contentInset.bottom - self.tableView.dl_height;
     
@@ -233,15 +237,15 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    NSLog(@"发送请求给服务器, 下拉刷新数据");
+//    NSLog(@"发送请求给服务器, 下拉刷新数据");
     //1.创建请求会话管理者
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     
     //2.拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"10";
+    parameters[@"type"] = @(self.type);
     
     //3.发送请求
     [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -267,12 +271,12 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     //1.创建请求会话管理者
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     //2.拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"10";
+    parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
     
     //3.发送请求
