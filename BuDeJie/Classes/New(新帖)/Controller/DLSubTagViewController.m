@@ -12,6 +12,7 @@
 #import <MJExtension/MJExtension.h>
 #import "DLSubTagItem.h"
 #import <SVProgressHUD.h>
+#import <MJRefresh.h>
 
 @interface DLSubTagViewController ()
 /** 存放模型数组 */
@@ -44,6 +45,14 @@
     //2.设置cell的背景色为默认分割线的颜色
     self.tableView.backgroundColor = [UIColor colorWithRed:220.0/255 green:220.0/255 blue:221.0/255 alpha:1];
     //3.将每个cell的最底部向上移动一个点
+    
+    [self setupRefresh];
+}
+
+- (void)setupRefresh {
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        DLFunc;
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

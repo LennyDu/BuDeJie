@@ -13,6 +13,8 @@
 #import <SDImageCache.h>
 #import "DLTopicCell.h"
 
+#import <MJRefresh.h>
+
 @interface DLTopicTableViewController ()
 /** 请求管理者 */
 @property (nonatomic,strong) AFHTTPSessionManager *manager;
@@ -93,39 +95,45 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     label.textAlignment = NSTextAlignmentCenter;
     self.tableView.tableHeaderView = label;
     
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
     //header
-    UIView *header = [[UIView alloc] init];
-    header.frame = CGRectMake(0, -50, self.tableView.dl_width, 50);
-    self.header = header;
-    [self.tableView addSubview:header];
-    
-    UILabel *headerLabel = [[UILabel alloc] init];
-    headerLabel.frame = header.bounds;
-    headerLabel.backgroundColor = [UIColor redColor];
-    headerLabel.text = @"下拉可以刷新";
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [header addSubview:headerLabel];
-    self.headerLabel = headerLabel;
-    
-    //首先让header
-    [self headerBeginRefreshing];
-    
-    //footer
-    UIView *footer = [[UIView alloc] init];
-    footer.frame = CGRectMake(0, 0, self.tableView.dl_width, 35);
-    _footer = footer;
-    
-    UILabel *footerLabel = [[UILabel alloc] init];
-    footerLabel.frame = footer.bounds;
-    footerLabel.backgroundColor = [UIColor redColor];
-    footerLabel.text = @"上拉可以加载更多";
-    footerLabel.textColor = [UIColor whiteColor];
-    footerLabel.textAlignment = NSTextAlignmentCenter;
-    [footer addSubview:footerLabel];
-    _footerLabel = footerLabel;
-    
-    self.tableView.tableFooterView = footer;
+//    UIView *header = [[UIView alloc] init];
+//    header.frame = CGRectMake(0, -50, self.tableView.dl_width, 50);
+//    self.header = header;
+//    [self.tableView addSubview:header];
+//    
+//    UILabel *headerLabel = [[UILabel alloc] init];
+//    headerLabel.frame = header.bounds;
+//    headerLabel.backgroundColor = [UIColor redColor];
+//    headerLabel.text = @"下拉可以刷新";
+//    headerLabel.textColor = [UIColor whiteColor];
+//    headerLabel.textAlignment = NSTextAlignmentCenter;
+//    [header addSubview:headerLabel];
+//    self.headerLabel = headerLabel;
+//    
+//    //首先让header
+//    [self headerBeginRefreshing];
+//    
+//    //footer
+//    UIView *footer = [[UIView alloc] init];
+//    footer.frame = CGRectMake(0, 0, self.tableView.dl_width, 35);
+//    _footer = footer;
+//    
+//    UILabel *footerLabel = [[UILabel alloc] init];
+//    footerLabel.frame = footer.bounds;
+//    footerLabel.backgroundColor = [UIColor redColor];
+//    footerLabel.text = @"上拉可以加载更多";
+//    footerLabel.textColor = [UIColor whiteColor];
+//    footerLabel.textAlignment = NSTextAlignmentCenter;
+//    [footer addSubview:footerLabel];
+//    _footerLabel = footerLabel;
+//    
+//    self.tableView.tableFooterView = footer;
 }
 
 #pragma mark - 监听
@@ -255,14 +263,16 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
         self.topics = [DLTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
         
-        [self headerEndRefreshing];
+//        [self headerEndRefreshing];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
         if (error.code != NSURLErrorCancelled) {
             [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
         }
         
-        [self headerEndRefreshing];
+//        [self headerEndRefreshing];
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -287,13 +297,15 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
         
         [self.tableView reloadData];
         
-        [self footerEndRefreshing];
+//        [self footerEndRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (error.code != NSURLErrorCancelled) {
             [SVProgressHUD showErrorWithStatus:@"网络繁忙, 请稍后再试!"];
         }
         
-        [self footerEndRefreshing];
+//        [self footerEndRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     }];
 }
 
