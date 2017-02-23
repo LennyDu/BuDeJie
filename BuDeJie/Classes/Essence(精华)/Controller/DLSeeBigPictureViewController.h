@@ -1,5 +1,5 @@
 //
-//  DLTopicPictureView.h
+//  DLSeeBigPictureViewController.h
 //  BuDeJie
 //
 //  Created by Lenny on 2017/2/23.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class DLTopicItem;
 
-@interface DLTopicPictureView : UIView
+@interface DLSeeBigPictureViewController : UIViewController
 /** 模型数据 */
 @property (nonatomic,strong) DLTopicItem *topic;
 @end

@@ -123,6 +123,7 @@
         _videoView.hidden = YES;
         _voiceView.hidden = YES;
         _pictureView.hidden = NO;
+        self.pictureView.topic = topic;
     } else if (topic.type == DLTopicTypeWord) {
         _videoView.hidden = YES;
         _voiceView.hidden = YES;

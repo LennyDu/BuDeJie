@@ -18,6 +18,7 @@
     UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:originImageUrl];
     if (originImage) { //原图已经下载过
         self.image = originImage;
+        completedBlock(originImage, nil, 0, [NSURL URLWithString:originImageUrl]);
     } else { //原图未下载过
         if (mgr.isReachableViaWiFi) { //Wi-Fi网络
             [self sd_setImageWithURL:[NSURL URLWithString:originImageUrl] placeholderImage:placeholder completed:completedBlock];

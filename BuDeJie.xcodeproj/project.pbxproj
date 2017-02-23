@@ -66,6 +66,8 @@
 		B8E58E5B1E5E6AD700EA5888 /* DLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E5A1E5E6AD700EA5888 /* DLTopicPictureView.m */; };
 		B8E58E5D1E5E6AE000EA5888 /* DLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E5C1E5E6ADF00EA5888 /* DLTopicPictureView.xib */; };
 		B8E58E601E5E877100EA5888 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */; };
+		B8E58E641E5ECA1900EA5888 /* DLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */; };
+		B8E58E651E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */; };
 		B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */; };
 		B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */; };
 		B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */; };
@@ -195,6 +197,9 @@
 		B8E58E5C1E5E6ADF00EA5888 /* DLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLTopicPictureView.xib; sourceTree = "<group>"; };
 		B8E58E5E1E5E877100EA5888 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
 		B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
+		B8E58E611E5ECA1900EA5888 /* DLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagViewController.h; sourceTree = "<group>"; };
 		B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagViewController.m; sourceTree = "<group>"; };
 		B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagCell.h; sourceTree = "<group>"; };
@@ -499,6 +504,9 @@
 				B8B8B8E71E5A75B6006A8EEC /* DLPictureTableViewController.m */,
 				B8B8B8E91E5A75C4006A8EEC /* DLWordTableViewController.h */,
 				B8B8B8EA1E5A75C4006A8EEC /* DLWordTableViewController.m */,
+				B8E58E611E5ECA1900EA5888 /* DLSeeBigPictureViewController.h */,
+				B8E58E621E5ECA1900EA5888 /* DLSeeBigPictureViewController.m */,
+				B8E58E631E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -847,6 +855,7 @@
 				B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */,
 				B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				B8E58E531E5E6A1800EA5888 /* DLTopicVideoView.xib in Resources */,
+				B8E58E651E5ECA1900EA5888 /* DLSeeBigPictureViewController.xib in Resources */,
 				B8A67D0F1E42D15A00E4A708 /* LaunchImage-568h@2x.png in Resources */,
 				B8A67D121E42D15A00E4A708 /* LaunchImage-800-667h@2x.png in Resources */,
 				B8BE94141E4042EA0025065E /* Main.storyboard in Resources */,
@@ -964,6 +973,7 @@
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
 				B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,
+				B8E58E641E5ECA1900EA5888 /* DLSeeBigPictureViewController.m in Sources */,
 				B8B8B8E21E5A7595006A8EEC /* DLVideoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

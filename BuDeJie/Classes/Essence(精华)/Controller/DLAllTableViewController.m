@@ -63,7 +63,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    self.tableView.rowHeight = 200;
     //设置一个cell的估算高度
-    self.tableView.estimatedRowHeight = 100;
+//    self.tableView.estimatedRowHeight = 100;
     
     //注册cell
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([DLTopicCell class]) bundle:nil];
@@ -194,6 +194,9 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     [self dealHeader];
     
     [self dealFooter];
+    
+    //清楚内存缓存
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 - (void)dealHeader {
@@ -238,7 +241,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"41";
+    parameters[@"type"] = @"10";
     
     //3.发送请求
     [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -269,7 +272,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"41";
+    parameters[@"type"] = @"10";
     parameters[@"maxtime"] = self.maxtime;
     
     //3.发送请求

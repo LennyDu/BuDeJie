@@ -52,6 +52,8 @@ typedef enum {
 @property (nonatomic,copy) NSString *image1;
 /** 中图 */
 @property (nonatomic,copy) NSString *image2;
+/** 是否为动图 */
+@property (nonatomic,assign) BOOL is_gif;
 
 /** 音频时长 */
 @property (nonatomic,assign) NSInteger voicetime;
@@ -65,4 +67,7 @@ typedef enum {
 
 /** 中间控件的frame */
 @property (nonatomic,assign) CGRect middleFrame;
+
+/** 是否为超长图片 */
+@property (nonatomic,assign, getter=isBigPicture) BOOL bigPicture;
 @end

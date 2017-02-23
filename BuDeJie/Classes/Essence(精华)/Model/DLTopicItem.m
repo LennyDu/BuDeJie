@@ -24,6 +24,11 @@
     if (self.type != DLTopicTypeWord) {
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
+        if (middleH >= DLScreenH) {
+            middleH = 200;
+            self.bigPicture = YES;
+        }
+//        NSLog(@"screenW:%f, middleW:%f, middleH:%f", [UIScreen mainScreen].bounds.size.width, middleW, middleH);
         CGFloat middleX = DLMargin;
         CGFloat middleY = _cellHeight;
         self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
