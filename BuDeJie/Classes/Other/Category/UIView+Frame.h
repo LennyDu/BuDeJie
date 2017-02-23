@@ -15,4 +15,7 @@
 @property CGFloat dl_y;
 @property CGFloat dl_centerX;
 @property CGFloat dl_centerY;
+
+/** 从xib加载view */
++ (instancetype)dl_viewFromXib;
 @end

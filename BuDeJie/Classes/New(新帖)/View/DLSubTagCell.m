@@ -39,7 +39,10 @@
     
     _subNumberLabel.text = subNumberString;
     
-    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [_iconImageView dl_setHeader:item.image_list];
+    
 }
 
 - (void)awakeFromNib {

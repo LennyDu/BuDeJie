@@ -20,6 +20,16 @@
     CGSize textMaxSize = CGSizeMake(DLScreenW - 2 * DLMargin, MAXFLOAT);
     _cellHeight += [self.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height + DLMargin;
     
+    //中间内容的高度
+    if (self.type != DLTopicTypeWord) {
+        CGFloat middleW = textMaxSize.width;
+        CGFloat middleH = middleW * self.height / self.width;
+        CGFloat middleX = DLMargin;
+        CGFloat middleY = _cellHeight;
+        self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
+        _cellHeight += middleH + DLMargin;
+    }
+    
     //最热评论
     if (self.top_cmt.count) {
         //最热评论标题高度

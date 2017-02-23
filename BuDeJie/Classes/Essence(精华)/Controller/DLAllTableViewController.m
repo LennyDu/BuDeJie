@@ -238,7 +238,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1";
+    parameters[@"type"] = @"41";
     
     //3.发送请求
     [self.manager GET:DLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -269,7 +269,7 @@ static NSString *const DLTopicCellId = @"DLTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1";
+    parameters[@"type"] = @"41";
     parameters[@"maxtime"] = self.maxtime;
     
     //3.发送请求

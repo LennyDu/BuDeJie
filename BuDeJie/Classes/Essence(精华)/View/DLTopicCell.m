@@ -9,6 +9,10 @@
 #import "DLTopicCell.h"
 #import "DLTopicItem.h"
 
+#import "DLTopicVideoView.h"
+#import "DLTopicVoiceView.h"
+#import "DLTopicPictureView.h"
+
 #import <UIImageView+WebCache.h>
 
 @interface DLTopicCell ()
@@ -22,9 +26,40 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
+
+/** 视频控件 */
+@property (nonatomic,weak) DLTopicVideoView *videoView;
+/** 声音控件 */
+@property (nonatomic,weak) DLTopicVoiceView *voiceView;
+/** 图片控件 */
+@property (nonatomic,weak) DLTopicPictureView *pictureView;
 @end
 
 @implementation DLTopicCell
+#pragma mark 懒加载中间控件
+- (DLTopicVideoView *)videoView {
+    if (!_videoView) {
+        _videoView = [DLTopicVideoView dl_viewFromXib];
+        [self.contentView addSubview:_videoView];
+    }
+    return _videoView;
+}
+
+- (DLTopicVoiceView *)voiceView {
+    if (!_voiceView) {
+        _voiceView = [DLTopicVoiceView dl_viewFromXib];
+        [self.contentView addSubview:_voiceView];
+    }
+    return _voiceView;
+}
+
+- (DLTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        _pictureView = [DLTopicPictureView dl_viewFromXib];
+        [self.contentView addSubview:_pictureView];
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -45,10 +80,11 @@
     _topic = topic;
     
 //    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage dl_circleImageNamed:@"defaultUserIcon"] options:0 completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        if (!image) return;
-        self.profileImageView.image = [image dl_circleImage];
-    }];
+//    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage dl_circleImageNamed:@"defaultUserIcon"] options:0 completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        if (!image) return;
+//        self.profileImageView.image = [image dl_circleImage];
+//    }];
+    [self.profileImageView dl_setHeader:topic.profile_image];
     self.nameLabel.text = topic.name;
     self.passtimeLabel.text = topic.passtime;
     self.text_label.text = topic.text;
@@ -70,6 +106,39 @@
         self.topCmtLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
     } else {
         self.topCmtView.hidden = YES;
+    }
+    
+    //中间控件
+    if (topic.type == DLTopicTypeVideo) {
+        _videoView.hidden = NO;
+        self.videoView.topic = topic;
+        _voiceView.hidden = YES;
+        _pictureView.hidden = YES;
+    } else if (topic.type == DLTopicTypeVoice) {
+        _videoView.hidden = YES;
+        _voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        _pictureView.hidden = YES;
+    } else if (topic.type == DLTopicTypePicture) {
+        _videoView.hidden = YES;
+        _voiceView.hidden = YES;
+        _pictureView.hidden = NO;
+    } else if (topic.type == DLTopicTypeWord) {
+        _videoView.hidden = YES;
+        _voiceView.hidden = YES;
+        _pictureView.hidden = YES;
+    }
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (self.topic.type == DLTopicTypeVideo) {
+        self.videoView.frame = self.topic.middleFrame;
+    } else if (self.topic.type == DLTopicTypeVoice) {
+        self.voiceView.frame = self.topic.middleFrame;
+    } else if (self.topic.type == DLTopicTypePicture) {
+        self.pictureView.frame = self.topic.middleFrame;
     }
 }
 

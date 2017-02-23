@@ -59,6 +59,13 @@
 		B8D199B61E45DEAC0066EF55 /* DLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D199B51E45DEAC0066EF55 /* DLFastLoginView.xib */; };
 		B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199B81E45E0290066EF55 /* DLFastLoginButton.m */; };
 		B8D199BC1E46082F0066EF55 /* DLLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D199BB1E46082F0066EF55 /* DLLoginTextField.m */; };
+		B8E58E511E5E6A0400EA5888 /* DLTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E501E5E6A0400EA5888 /* DLTopicVideoView.m */; };
+		B8E58E531E5E6A1800EA5888 /* DLTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E521E5E6A1800EA5888 /* DLTopicVideoView.xib */; };
+		B8E58E561E5E6AA500EA5888 /* DLTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E551E5E6AA500EA5888 /* DLTopicVoiceView.m */; };
+		B8E58E581E5E6AB500EA5888 /* DLTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E571E5E6AB500EA5888 /* DLTopicVoiceView.xib */; };
+		B8E58E5B1E5E6AD700EA5888 /* DLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E5A1E5E6AD700EA5888 /* DLTopicPictureView.m */; };
+		B8E58E5D1E5E6AE000EA5888 /* DLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E58E5C1E5E6ADF00EA5888 /* DLTopicPictureView.xib */; };
+		B8E58E601E5E877100EA5888 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */; };
 		B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */; };
 		B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EB9D741E448F0800E23B6A /* DLSubTagCell.m */; };
 		B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EB9D751E448F0800E23B6A /* DLSubTagCell.xib */; };
@@ -177,6 +184,17 @@
 		B8D199B81E45E0290066EF55 /* DLFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFastLoginButton.m; sourceTree = "<group>"; };
 		B8D199BA1E46082F0066EF55 /* DLLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLoginTextField.h; sourceTree = "<group>"; };
 		B8D199BB1E46082F0066EF55 /* DLLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLoginTextField.m; sourceTree = "<group>"; };
+		B8E58E4F1E5E6A0400EA5888 /* DLTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicVideoView.h; sourceTree = "<group>"; };
+		B8E58E501E5E6A0400EA5888 /* DLTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicVideoView.m; sourceTree = "<group>"; };
+		B8E58E521E5E6A1800EA5888 /* DLTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLTopicVideoView.xib; sourceTree = "<group>"; };
+		B8E58E541E5E6AA500EA5888 /* DLTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicVoiceView.h; sourceTree = "<group>"; };
+		B8E58E551E5E6AA500EA5888 /* DLTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicVoiceView.m; sourceTree = "<group>"; };
+		B8E58E571E5E6AB500EA5888 /* DLTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLTopicVoiceView.xib; sourceTree = "<group>"; };
+		B8E58E591E5E6AD700EA5888 /* DLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTopicPictureView.h; sourceTree = "<group>"; };
+		B8E58E5A1E5E6AD700EA5888 /* DLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTopicPictureView.m; sourceTree = "<group>"; };
+		B8E58E5C1E5E6ADF00EA5888 /* DLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLTopicPictureView.xib; sourceTree = "<group>"; };
+		B8E58E5E1E5E877100EA5888 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
+		B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
 		B8EB9D701E448DB700E23B6A /* DLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagViewController.h; sourceTree = "<group>"; };
 		B8EB9D711E448DB700E23B6A /* DLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSubTagViewController.m; sourceTree = "<group>"; };
 		B8EB9D731E448F0800E23B6A /* DLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSubTagCell.h; sourceTree = "<group>"; };
@@ -253,6 +271,8 @@
 				B888C05F1E4206AE00FFEFF0 /* UIView+Frame.m */,
 				B888C0611E4211CD00FFEFF0 /* UIBarButtonItem+Item.h */,
 				B888C0621E4211CD00FFEFF0 /* UIBarButtonItem+Item.m */,
+				B8E58E5E1E5E877100EA5888 /* UIImageView+Download.h */,
+				B8E58E5F1E5E877100EA5888 /* UIImageView+Download.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -500,6 +520,15 @@
 				B87588F11E5BDC6D006CE391 /* DLTopicCell.h */,
 				B87588F21E5BDC6D006CE391 /* DLTopicCell.m */,
 				B875890C1E5C3058006CE391 /* DLTopicCell.xib */,
+				B8E58E4F1E5E6A0400EA5888 /* DLTopicVideoView.h */,
+				B8E58E501E5E6A0400EA5888 /* DLTopicVideoView.m */,
+				B8E58E521E5E6A1800EA5888 /* DLTopicVideoView.xib */,
+				B8E58E541E5E6AA500EA5888 /* DLTopicVoiceView.h */,
+				B8E58E551E5E6AA500EA5888 /* DLTopicVoiceView.m */,
+				B8E58E571E5E6AB500EA5888 /* DLTopicVoiceView.xib */,
+				B8E58E591E5E6AD700EA5888 /* DLTopicPictureView.h */,
+				B8E58E5A1E5E6AD700EA5888 /* DLTopicPictureView.m */,
+				B8E58E5C1E5E6ADF00EA5888 /* DLTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -804,6 +833,7 @@
 				B8D199B61E45DEAC0066EF55 /* DLFastLoginView.xib in Resources */,
 				B8EB9D7C1E44AFE300E23B6A /* DLFriendTrendViewController.xib in Resources */,
 				B8BE94191E4042EA0025065E /* LaunchScreen.storyboard in Resources */,
+				B8E58E5D1E5E6AE000EA5888 /* DLTopicPictureView.xib in Resources */,
 				B8D199AC1E45C8000066EF55 /* DLLoginRegisterViewController.xib in Resources */,
 				B8EB9D771E448F0800E23B6A /* DLSubTagCell.xib in Resources */,
 				B8A67D101E42D15A00E4A708 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -812,9 +842,11 @@
 				B8BE94161E4042EA0025065E /* Assets.xcassets in Resources */,
 				B8A67D111E42D15A00E4A708 /* LaunchImage-700@2x.png in Resources */,
 				B875890D1E5C3058006CE391 /* DLTopicCell.xib in Resources */,
+				B8E58E581E5E6AB500EA5888 /* DLTopicVoiceView.xib in Resources */,
 				B8A1869B1E46FF66005CA154 /* DLMeTableViewController.storyboard in Resources */,
 				B84C6B741E4EEDED0006ECA3 /* DLWebViewController.xib in Resources */,
 				B8A67D131E42D15A00E4A708 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				B8E58E531E5E6A1800EA5888 /* DLTopicVideoView.xib in Resources */,
 				B8A67D0F1E42D15A00E4A708 /* LaunchImage-568h@2x.png in Resources */,
 				B8A67D121E42D15A00E4A708 /* LaunchImage-800-667h@2x.png in Resources */,
 				B8BE94141E4042EA0025065E /* Main.storyboard in Resources */,
@@ -894,6 +926,7 @@
 			files = (
 				B84C6B731E4EEDED0006ECA3 /* DLWebViewController.m in Sources */,
 				B8A1869F1E47068E005CA154 /* DLSquareCollectionViewCell.m in Sources */,
+				B8E58E511E5E6A0400EA5888 /* DLTopicVideoView.m in Sources */,
 				B888C0601E4206AE00FFEFF0 /* UIView+Frame.m in Sources */,
 				B8D199B91E45E0290066EF55 /* DLFastLoginButton.m in Sources */,
 				B8B8B8E51E5A75A7006A8EEC /* DLVoiceTableViewController.m in Sources */,
@@ -920,11 +953,14 @@
 				B81F84BA1E40860B002CB823 /* DLNewViewController.m in Sources */,
 				B8EB9D721E448DB700E23B6A /* DLSubTagViewController.m in Sources */,
 				B8FFD3C31E407D9B00774227 /* AppDelegate.m in Sources */,
+				B8E58E5B1E5E6AD700EA5888 /* DLTopicPictureView.m in Sources */,
 				B8EB9D761E448F0800E23B6A /* DLSubTagCell.m in Sources */,
 				B87588F31E5BDC6D006CE391 /* DLTopicCell.m in Sources */,
 				B888C0591E41882800FFEFF0 /* DLTabBarController.m in Sources */,
+				B8E58E561E5E6AA500EA5888 /* DLTopicVoiceView.m in Sources */,
 				B8D199AB1E45C8000066EF55 /* DLLoginRegisterViewController.m in Sources */,
 				B84C6B791E4F1B500006ECA3 /* DLFileTool.m in Sources */,
+				B8E58E601E5E877100EA5888 /* UIImageView+Download.m in Sources */,
 				B8EB9D7A1E449E5300E23B6A /* DLSubTagItem.m in Sources */,
 				B8B8B8EB1E5A75C4006A8EEC /* DLWordTableViewController.m in Sources */,
 				B8C10D781E42EA750098C577 /* DLAdItem.m in Sources */,

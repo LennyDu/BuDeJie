@@ -10,6 +10,8 @@
 #import "DLTabBarController.h"
 #import "DLAdViewController.h"
 
+#import <AFNetworking.h>
+
 @interface AppDelegate ()
 
 @end
@@ -33,6 +35,9 @@
     
     //显示窗口
     [self.window makeKeyAndVisible];
+    
+    //监控网络状况
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
 }
 
